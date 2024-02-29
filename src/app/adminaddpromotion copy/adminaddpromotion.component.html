@@ -1,0 +1,66 @@
+<app-admin-header></app-admin-header>
+<div class="addUserWrapper" [class.loading]="loading">
+    <div class="addUserMain">
+        <h2>Welcome, Admin!</h2>
+  
+        <!-- Add Promotion Form -->
+        <form (ngSubmit)="addNewPromotion()" class="addUserForm">
+            <!-- Promotion Code -->
+            <div class="form-group" [formGroup]="addPromoForm">
+                <label for="promoCode" class="labelTag">Promotion Code</label>
+                <input class="form-element"
+                    type="text"
+                    id="promoCode"
+                    name="promoCode"
+                    placeholder="Add Promotion Code"
+                    required >
+            </div>
+            <!-- Promotion description -->
+            <div class="form-group" [formGroup]="addPromoForm">
+                <label for="promoDescription" class="labelTag">Promotion Description</label>
+                <input class="form-element"
+                    type="text"
+                    id="promoDescription"
+                    name="promoDescription"
+                    placeholder="Enter a Description"
+                    required >
+            </div>
+  
+            <!-- Availability Start Date -->
+            <div class="form-group" [formGroup]="addPromoForm">
+                <label for="startDate" class="labelTag">Starts From</label>
+                <input class="form-element"
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    placeholder="Promotion Start Date"
+                    required>
+            </div>
+            <!-- Availability End Date -->
+            <div class="form-group" [formGroup]="addPromoForm">
+                <label for="endDate" class="labelTag">Ends on</label>
+                <input class="form-element"
+                    type="date"
+                    id="endDate"
+                    name="endDate"
+                    placeholder="Promotion End Date"
+                    required>
+            </div>
+            <!-- Discount Applied -->
+            <div class="form-group" [formGroup]="addPromoForm">
+                <label for="discountApplied" class="labelTag">Discount Applied</label>
+                <input class="form-element"
+                    type="number"
+                    id="discountApplied"
+                    name="discountApplied"
+                    placeholder="Discount"
+                    required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="addButton" matTooltip="Add promotion to list!">Add Promotion</button>
+        </form>
+    </div>
+    <div class="loader" *ngIf="loading"></div>
+</div>
+<app-admin-footer></app-admin-footer>

@@ -1,0 +1,28 @@
+/* home-component.css */
+
+/* Style for the header section */
+.header {
+    background-color: #ffffff; /* Dark grey background for the header */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  /* Style for the app-header component */
+  app-header {
+    /* Define styles for the app-header component if needed */
+  }
+  
+  /* Style for the app-homeswiper component */
+  app-homeswiper {
+    /* Define styles for the app-homeswiper component if needed */
+  }
+  
+  /* Style for the app-footer component */
+  app-footer {
+    background-color: #ffffff; /* Dark grey background for the footer */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  /* Additional styles for other components can be added here */
+  

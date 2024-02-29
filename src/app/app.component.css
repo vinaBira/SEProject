@@ -1,0 +1,57 @@
+/* Import Bootstrap and Font Awesome */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~font-awesome/css/font-awesome.css';
+
+/* Define color variables */
+:root {
+  --dark-grey: #333333;
+  --red: #FF0000;
+}
+
+/* Set global styles */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--dark-grey); /* Set default text color to dark grey */
+  background-color: #ffffff; /* Set background color to white */
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Header styles */
+header {
+  background-color: var(--dark-grey); /* Set header background color to dark grey */
+  color: #ffffff; /* Set header text color to white */
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--dark-grey); /* Set footer background color to dark grey */
+  color: #ffffff; /* Set footer text color to white */
+}
+
+/* Button styles */
+button {
+  background-color: var(--red); /* Set button background color to red */
+  color: #ffffff; /* Set button text color to white */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #cc0000; /* Darken button color on hover */
+}

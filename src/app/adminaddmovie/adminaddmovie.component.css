@@ -1,0 +1,72 @@
+.addMovie-container {
+    background-color: #e2d2ee;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.welcomeMessage h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #4B0082;
+}
+
+.addMovieForm {
+    margin-top: 30px;
+}
+
+.addMovieForm label {
+    font-weight: bold;
+    color: #4B0082;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.addButton {
+    background-color: #4B0082;
+    color: #FFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.addMovieForm select,
+.addMovieForm input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.addMovieForm textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,51 @@
+.addUserWrapper {
+  max-width: 900px;
+  background: #e2d2ee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align:center;
+  font-weight: 800;
+  color: #4B0082; 
+}
+
+.addUserForm {
+  margin-bottom: 20px;
+}
+
+.addButton {
+  color: #FFF;
+  background-color: #4B0082;
+  padding: 12px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+
+}
+
+.addUserForm label {
+  font-weight: 500;
+  color: #4B0082;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-element {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+

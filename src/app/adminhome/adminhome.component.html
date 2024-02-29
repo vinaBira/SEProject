@@ -1,0 +1,17 @@
+<app-admin-header></app-admin-header>
+<div class="adminHomeWrapper">
+  <div class="adminHomeMain">
+    <div class="adminNavigation">
+      <div class="tab">
+        <button class="tablinks" [class.active]="activeTab === 'Movies'" (click)="setActiveTab('Movies')">Movies</button>
+        <button class="tablinks" [class.active]="activeTab === 'Users'" (click)="setActiveTab('Users')">Users</button>
+        <button class="tablinks" [class.active]="activeTab === 'Promotions'" (click)="setActiveTab('Promotions')">Promotions</button>
+      </div>
+    </div>
+
+    <app-adminmanagemovies *ngIf="activeTab === 'Movies'"></app-adminmanagemovies>
+    <app-adminmanageusers *ngIf="activeTab === 'Users'"></app-adminmanageusers>
+    <app-adminmanagepromotions *ngIf="activeTab === 'Promotions'"></app-adminmanagepromotions>
+  </div>
+</div>
+<app-admin-footer></app-admin-footer>

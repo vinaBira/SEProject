@@ -1,0 +1,101 @@
+.checkoutContainerMain{ 
+  background: linear-gradient(to bottom, #4B0082, #000000);
+  color: #fff; /* White text color */
+}
+
+.container {
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.5);
+  opacity: 0.9;
+  color: #fff; /* White text color */
+}
+
+.row {
+  margin-bottom: 20px;
+  color: #fff; /* White text color */
+}
+
+.col-md-6 {
+  width: 50%;
+  float: left;
+  color: #fff; /* White text color */
+}
+
+/* Movie Details Column */
+.MovieDetailsDiv {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.5);
+  text-align: center;
+  color: #fff; /* White text color */
+}
+
+/* Payment and Promotion Column */
+.paymentDetailsDiv {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background:rgba(128, 128, 128, 0.5);
+  margin-top: 10px;
+  color: #fff; /* White text color */
+}
+
+.orderDetailsDiv {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.5); 
+  color: #fff; /* White text color */
+}
+
+/* Buttons Section */
+.text-center {
+  text-align: center;
+  color: #fff; /* White text color */
+}
+
+.width50per {
+  width: calc(50% - 60px);
+  color: #fff; /* White text color */
+}
+
+.promo-code-section .inpBtnFlx {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexBtns {
+  text-align: center;
+  color: #fff; /* White text color */
+}
+
+.flexBtns button {
+  margin-right: 10px;
+  background: linear-gradient(to bottom right, #4B0082, #000000);
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.flexBtns button:hover {
+  background: linear-gradient(to bottom right, #5a1a88, #484747);
+}
+
+.col-md-12 button {
+  margin-right: 10px;
+  background: linear-gradient(to bottom right, #4B0082, #000000);
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.col-md-12 button:hover {
+  background: linear-gradient(to bottom right, #5a1a88, #484747);
+}
