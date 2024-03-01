@@ -1,38 +1,40 @@
 <app-admin-header></app-admin-header>
 <div class="addMovieWrapper">
-    <div class="addMovieMain">
-      <div class="addMovie-container">
-        <!-- Welcome Admin Message -->
-        <div class="welcomeMessage">
-            <h2>Hello, Admin!</h2>
-        </div>
+  <div class="addMovieMain">
+    <div class="addMovie-container">
+      <!-- Welcome Admin Message -->
+      <div class="welcomeMessage">
+        <h2>Hello, Admin!</h2>
+      </div>
 
-        <!-- Add Movie Form -->
-        <form  (ngSubmit)="addMovieToDatabase()"  class="addMovieForm">
-          <!-- Movie Title -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieTitle" class="labelTag">Movie Title</label>
-            <input class="form-control"
-              type="text"
-              id="movieTitle"
-              name="movieTitle"
-              formControlName="movieTitle"
-              placeholder="Movie Title"
-              required
-            >
-          </div>
-  
-          <!-- Movie Category -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieCategory" class="labelTag">Movie Category</label>
-            <input class="form-control"
-              type="text"
-              id="movieCategory"
-              name="movieCategory"
-              formControlName="movieCategory"
-              placeholder="Movie Category"
-            >
-          </div>
+      <!-- Add Movie Form -->
+      <form (ngSubmit)="onSubmit()" class="addMovieForm" [formGroup]="movieForm" novalidate>
+        <!-- Movie Title -->
+        <div class="form-group" [class.has-error]="submitted && f.movieTitle.errors">
+          <label for="movieTitle" class="labelTag">Movie Title<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="text"
+            id="movieTitle"
+            name="movieTitle"
+            formControlName="movieTitle"
+            placeholder="Movie Title"
+          >
+          <div *ngIf="submitted && f.movieTitle.errors" class="help-block">Movie Title is required</div>
+        </div>
+        
+
+        <!-- Movie Category -->
+        <div class="form-group" [class.has-error]="submitted && f.movieCategory.errors">
+          <label for="movieCategory" class="labelTag">Movie Category<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="text"
+            id="movieCategory"
+            name="movieCategory"
+            formControlName="movieCategory"
+            placeholder="Movie Category"
+          >
+          <div *ngIf="submitted && f.movieCategory.errors" class="help-block">Movie Category is required</div>
+        </div>
   
           <!-- Movie Director -->
           <div class="form-group" [formGroup]="movieForm">
@@ -82,30 +84,29 @@
             >
           </div> 
   
-          <!-- Release Date -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="releaseDate" class="labelTag">Release Date</label>
-            <input class="form-control"
-              type="date"
-              id="releaseDate"
-              name="releaseDate"
-              formControlName="releaseDate"
-            >
-          </div>
+<!-- Release Date -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="releaseDate" class="labelTag">Release Date<span class="mandatory">*</span></label>
+  <input class="form-control"
+    type="date"
+    id="releaseDate"
+    name="releaseDate"
+    formControlName="releaseDate"
+    required
+  >
+</div>
   
-          <!-- Synopsis -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="synopsis" class="labelTag">Synopsis</label>
-            <textarea class="form-control" 
-              id="synopsis"
-              name="synopsis"
-              formControlName="synopsis"
-              placeholder="Synopsis"
-              required
-            >
-          </textarea>
-           
-          </div>
+<!-- Synopsis -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="synopsis" class="labelTag">Synopsis<span class="mandatory">*</span></label>
+  <textarea class="form-control" 
+    id="synopsis"
+    name="synopsis"
+    formControlName="synopsis"
+    placeholder="Synopsis"
+    required
+  ></textarea>
+</div>
   
           <!-- Reviews -->
           <div class="form-group" [formGroup]="movieForm">
@@ -120,18 +121,22 @@
           </textarea>
             
           </div>
-          <!-- Language -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="language" class="labelTag">Movie Language</label>
-            <input class="form-control"
-              type="text"
-              id="language"
-              name="language"
-              formControlName="language"
-              placeholder="Language"
-              required
-            >
-          </div>
+<!-- Movie Language -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="language" class="labelTag">Movie Language<span class="mandatory">*</span></label>
+  <input class="form-control"
+    type="text"
+    id="language"
+    name="language"
+    formControlName="language"
+    placeholder="Language"
+    required
+  >
+  <div *ngIf="movieForm.get('movieForm')?.invalid && movieForm.get('movieForm')?.touched" class="error-message">
+    Please your First Name.
+</div>
+</div>
+
   
           <!-- Trailer Link -->
           <div class="form-group" [formGroup]="movieForm">
@@ -171,45 +176,70 @@
             >
           </div>
 
-          <!-- Movie Availability Dropdown -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieAvailability" class="labelTag">Movie Availability</label>
-            <select class="form-control" id="movieAvailability" name="movieAvailability" formControlName="movieAvailability">
-              <option value="0">Currently Playing</option>
-              <option value="1">Coming Soon</option>
-              <option value="2">Already Played</option>
-            </select>
-          </div>
+ <!-- Movie Availability Dropdown -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="movieAvailability" class="labelTag">Movie Availability<span class="mandatory">*</span></label>
+  <select class="form-control" id="movieAvailability" name="movieAvailability" formControlName="movieAvailability" required>
+    <option value="0">Currently Playing</option>
+    <option value="1">Coming Soon</option>
+    <option value="2">Already Played</option>
+  </select>
+</div>
   
-          <!-- Poster Source -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="posterSrc" class="labelTag">Poster Source</label>
-            <input class="form-control"
-              type="text"
-              id="posterSrc"
-              name="posterSrc"
-              formControlName="posterSrc"
-              placeholder="Poster URL"
-            >
-          </div>
+<!-- Poster Source -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="posterSrc" class="labelTag">Poster Source<span class="mandatory">*</span></label>
+  <input class="form-control"
+    type="text"
+    id="posterSrc"
+    name="posterSrc"
+    formControlName="posterSrc"
+    placeholder="Poster URL"
+    required
+  >
+</div>
   
-      <!-- Banner Source -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="bannerSrc" class="labelTag">Banner Source</label>
-            <input class="form-control"
-              type="text"
-              id="BannerSrc"
-              name="BannerSrc"
-              formControlName="bannerSrc"
-              placeholder="Banner URL"
-            >
-          </div>
-          <!-- Submit Button -->
-          <button type="submit" class="addButton" matTooltip="Add movie to list!">Add Movie</button>
-        </form>
-      </div>
-    </div>
+<!-- Banner Source -->
+<div class="form-group" [formGroup]="movieForm">
+  <label for="bannerSrc" class="labelTag">Banner Source<span class="mandatory">*</span></label>
+  <input class="form-control"
+    type="text"
+    id="BannerSrc"
+    name="BannerSrc"
+    formControlName="bannerSrc"
+    placeholder="Banner URL"
+    required
+  >
+</div>
+<form (ngSubmit)="onSubmit()" class="addMovieForm" [formGroup]="movieForm" novalidate>
+  <div class="form-group" [class.has-error]="submitted && f.movieTitle.errors">
+    <label for="movieTitle" class="labelTag">Movie Title<span class="mandatory">*</span></label>
+    <input class="form-control"
+      type="text"
+      id="movieTitle"
+      name="movieTitle"
+      formControlName="movieTitle"
+      placeholder="Movie Title"
+    >
+    <div *ngIf="submitted && f.movieTitle.errors" class="help-block">Movie Title is required</div>
   </div>
+
+  <div class="form-group" [class.has-error]="submitted && f.releaseDate.errors">
+    <label for="releaseDate" class="labelTag">Release Date<span class="mandatory">*</span></label>
+    <input class="form-control"
+      type="date"
+      id="releaseDate"
+      name="releaseDate"
+      formControlName="releaseDate"
+    >
+    <div *ngIf="submitted && f.releaseDate.errors" class="help-block">Release Date is required</div>
+  </div>
+
+  <!-- Repeat this pattern for each form field -->
+
+  <button type="submit" class="addButton">Add Movie</button>
+</form>
+
 
   
   
