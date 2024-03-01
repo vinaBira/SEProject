@@ -46,7 +46,7 @@ export class appApiServices {
 
     getMoviesList(): Observable<any> {
         const headers= new HttpHeaders().set('content-type', 'application/json;charset=utf-8').set('Access-Control-Allow-Origin', '*');
-        return this.httpClient.get("http://localhost:8080/movies/getallmovies",{'headers':headers});
+        return this.httpClient.get("http://localhost:8080/getallmovies",{'headers':headers});
     }
 
     //Signup Form
@@ -112,7 +112,7 @@ resetPassword(email: string, password: string): Observable<any> {
         .set('Access-Control-Allow-Methods', 'OPTIONS,POST,GET')
         .set('Access-Control-Allow-Origin', '*');
         const data = { movieTitle };
-        return this.httpClient.post("http://localhost:8080/movies/getmoviedetails", data, { 'headers': headers });
+        return this.httpClient.post("http://localhost:8080/getmoviedetails", data, { 'headers': headers });
   }
 
   addMovieAdmin(formData: any): Observable<any>
@@ -121,7 +121,7 @@ resetPassword(email: string, password: string): Observable<any> {
         .set('content-type', 'application/json;charset=utf-8')
         .set('Access-Control-Allow-Methods', 'OPTIONS,POST,GET')
         .set('Access-Control-Allow-Origin', '*');
-        return this.httpClient.post("http://localhost:8080/movies/addmovie", formData, { 'headers': headers });
+        return this.httpClient.post("http://localhost:8080/addmovie", formData, { 'headers': headers });
   }
   scheduleMovieAdmin(formData: any): Observable<any>
   {
