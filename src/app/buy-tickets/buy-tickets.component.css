@@ -128,7 +128,7 @@ select {
 }
 
 .seat:hover {
-    background-color: #bbe1fa; 
+    background-color: #504157; 
 }
 
 .seat.selected {
@@ -155,7 +155,7 @@ button {
 }
 
 button:hover {
-    background-color: #4B0082;
+    background-color: #744a95;
 }
 
 .movie-poster {
@@ -199,7 +199,7 @@ button:hover {
 
 /* Style the "+" and "-" buttons */
 .counterBtn:hover {
-    background-color: #4B0082;
+    background-color: #744a95;
 }
 
 /* Style the input when it's focused */

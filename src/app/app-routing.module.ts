@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'admin/addmovie', component: AdminaddmovieComponent  },
   { path: 'admin/adduser', component: AdminadduserComponent  },
   { path: 'admin/addpromotion', component: AdminaddpromotionComponent  },
-  { path: 'admin/home', component: AdminhomeComponent ,canActivate: [AuthGuard] },
+  { path: 'admin/home', component: AdminhomeComponent /*,canActivate: [AuthGuard]*/ },
   { path: 'admin/manage/movies', component: AdminmanagemoviesComponent  },
   { path: 'admin/deletemovies', component: AdmindeletemovieComponent  },
   { path: 'admin/manage/users', component: AdminmanageusersComponent  },

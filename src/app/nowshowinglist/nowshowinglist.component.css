@@ -36,6 +36,10 @@
     margin-top: 10px;
 }
 
+.bookTicketBtn:hover {
+    background-color: #744a95;
+}
+
 .movieInfo {
     margin-top: 10px;
     text-align: left;

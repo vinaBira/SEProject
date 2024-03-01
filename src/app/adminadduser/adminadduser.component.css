@@ -38,6 +38,10 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
+
+.addBtn:hover {
+    background-color: #744a95;
+}
 .addUserForm label
 {
    font-weight: 500;
