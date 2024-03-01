@@ -1,6 +1,7 @@
 .movieListWrapper {
   margin: 20px; 
   height: 80vh; /*height to 80% of the viewport height */
+  margin:0;
 }
 
 .navigationWrapper {
@@ -240,8 +241,9 @@
 
 .noMessage {
   text-align: center;
-  color: #FFF;
+  color: #ea1313;
   font-weight: 800;
+  font-size: 24px;
 }
 
 :host ::ng-deep .mat-form-field-infix {

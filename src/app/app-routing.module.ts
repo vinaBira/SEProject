@@ -22,6 +22,7 @@ import {EmailConfirmCodeComponent} from './email-confirm-code/email-confirm-code
 import {ForgotpasswordComponent} from './forgotpassword/forgotpassword.component';
 import {ResetpasswordComponent} from './resetpassword/resetpassword.component';
 import { BookingHistoryComponent } from './booking-history/booking-history.component';
+import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
 import { AuthGuard } from './auth.guard';
 
 
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: 'admin/deletemovies', component: AdmindeletemovieComponent  },
   { path: 'admin/manage/users', component: AdminmanageusersComponent  },
   { path: 'admin/manage/promotions', component: AdminmanagepromotionsComponent  },
+  { path: 'registration-confirmation', component: RegistrationConfirmationComponent},
   
 ];
 
