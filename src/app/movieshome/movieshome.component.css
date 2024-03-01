@@ -1,12 +1,12 @@
 .movieListWrapper {
-  margin: 20px; 
-  height: 80vh; /*height to 80% of the viewport height */
+  margin: 10px; 
+  height: 10vh; /*height to 80% of the viewport height */
   margin:0;
 }
 
 .navigationWrapper {
   display: flex;
-  padding: 0px 25px;
+  padding: 0px ;
   justify-content: space-between;
   align-items: center;
 }
@@ -16,7 +16,7 @@
 }
 
 .categoryBtn.active {
-  background-color: #aa92d3; /* Purple-black */
+  background-color: #4B0082; /* Purple-black */
   color: #FFF;
   padding: 8px 15px;
   margin-right: 5px;
@@ -29,7 +29,7 @@
 
 .categoryBtn {
   color: #FFF; /* Purple-black */
-  background-color: #4B0082; /* Purple-black */
+  background-color: #aa92d3; /* Purple-black */
   padding: 8px 15px;
   margin-right: 5px;
   border: unset;
@@ -98,7 +98,7 @@
 /* now showing css */
 
 .nowShowingWrapper {
-  margin: 20px;
+  margin: 10px; /* Reduced margin */
   overflow-x: hidden;
 }
 
@@ -156,7 +156,7 @@
 /* Upcoming css */
 
 .upComingWrapper {
-  margin: 20px;
+  margin: 10px;
   overflow-x: hidden;
 }
 

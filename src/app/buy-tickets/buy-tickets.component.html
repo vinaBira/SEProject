@@ -68,13 +68,14 @@
         <div class="select-time customSelectTime">
             <label for="movie-time">Select Show Time:</label>
             <select class="form-control marR5 width59per" id="movie-time" name="movie-time" [(ngModel)]="selectedTime" required>
-                <option *ngFor="let show of movieShowsScheduled" [value]="show.showTime">{{ show.showTimeFormatted }}</option>
+              <option value="1:00 PM">1:00 PM</option>
+                <!-- <option *ngFor="let show of movieShowsScheduled" [value]="show.showTime">{{ show.showTimeFormatted }}</option> -->
             </select>
         </div>
 
     <!-- Select User -->
 <div class="select-user">
-  <label for="is-adult">Are you 18+ person?</label>
+  <label for="is-adult"> Do you want to add child tickets?</label>
   <select class="form-control" id="is-adult" [(ngModel)]="isAdult" (change)="onUserSelectionChange($event)">
       <option value="true">Yes</option>
       <option value="false">No</option>
