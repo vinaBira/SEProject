@@ -325,4 +325,8 @@
     font-weight: bold; /* Make the text bold */
     margin-top: 10px; /* Add some top margin for spacing */
   }
+
+  p{
+    margin-bottom: 30px;
+  }
   
