@@ -15,7 +15,7 @@
 }
 
 .nowShowingCards {
-    border: 1px solid #4B0082; /* Purple-black */
+    border: 1px solid #a0b3e2; /* Purple-black */
     border-radius: 5px;
     padding: 5px 10px;
     box-shadow: 1px 1px 3px 2px #c1d8e6;
@@ -27,7 +27,7 @@
 }
 
 .bookTicketBtn {
-    background-color: #4B0082; /* Purple-black */
+    background-color: #a0b3e2; /* Purple-black */
     color: #FFF; /* White */
     padding: 8px 10px;
     font-weight: 500;
@@ -37,7 +37,7 @@
 }
 
 .bookTicketBtn:hover {
-    background-color: #744a95;
+    background-color: #011631;
 }
 
 .movieInfo {

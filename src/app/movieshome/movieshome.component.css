@@ -16,7 +16,7 @@
 }
 
 .categoryBtn.active {
-  background-color: #4B0082; /* Purple-black */
+  background-color: #a0b3e2; /* Purple-black */
   color: #FFF;
   padding: 8px 15px;
   margin-right: 5px;
@@ -29,7 +29,7 @@
 
 .categoryBtn {
   color: #FFF; /* Purple-black */
-  background-color: #aa92d3; /* Purple-black */
+  background-color: #011631; /* Purple-black */
   padding: 8px 15px;
   margin-right: 5px;
   border: unset;
@@ -38,6 +38,8 @@
   box-shadow: 1px 1px 3px 2px #c1d8e6;
   width: 185px;
 }
+
+
 
 .searchWrapper {
   display: flex;
@@ -49,7 +51,7 @@
   width: 480px;
   padding: 6px 10px;
   border-radius: 10px;
-  color: #4B0082; /* Purple-black */
+  color: #a0b3e2; /* Purple-black */
 }
 
 .searchImg {
@@ -59,25 +61,28 @@
 }
 
 .searchText {
-  color: #4B0082; /* Purple-black */
+  color: #a0b3e2; /* Purple-black */
   border: unset;
   width: 90%;
   padding-left: 5px;
 }
 
 .searchText::placeholder {
-  color: #4B0082; /* Purple-black */
+  color: #a0b3e2; /* Purple-black */
   opacity: 1; /* Firefox */
 }
 
 .searchBtn {
   color: #FFF;
-  background-color: #4B0082; /* Purple-black */
+  background-color: #a0b3e2; /* Purple-black */
   padding: 5px 15px;
   text-align: center;
   border: unset;
   border-radius: 10px;
   margin-left: 15px;
+}
+.searchBtn:hover {
+  background-color: #011631; /* Change the background color on hover */
 }
 
 .searchText:focus-visible {
@@ -114,15 +119,15 @@
 }
 
 .nowShowingCards {
-  border: 1px solid #4B0082; /* Purple-black */
+  border: 1px solid #a0b3e2; /* Purple-black */
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 1px 1px 3px 2px #c1d8e6;
-  color: #4B0082; /* Purple-black */
+  color: #a0b3e2; /* Purple-black */
 }
 
 .bookTicketBtn {
-  background-color: #4B0082; /* Purple-black */
+  background-color: #a0b3e2; /* Purple-black */
   color: #FFF;
   padding: 8px 10px;
   font-weight: 500;
@@ -172,15 +177,15 @@
 }
 
 .upComingCards {
-  border: 1px solid #4B0082; /* Purple-black */
+  border: 1px solid #a0b3e2; /* Purple-black */
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 1px 1px 3px 2px #c1d8e6;
-  color: #4B0082; /* Purple-black */
+  color: #a0b3e2; /* Purple-black */
 }
 
 .bookTicketBtn {
-  background-color: #4B0082; /* Purple-black */
+  background-color: #a0b3e2; /* Purple-black */
   color: #FFF;
   padding: 8px 10px;
   font-weight: 500;
