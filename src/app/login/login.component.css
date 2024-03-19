@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #4B0082, #000000); /* Gradient background */
+  background: black;
 }
 
 .loginMain {
@@ -31,7 +31,7 @@
   font-size: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B; 
 }
 
 .login-container .form-group {
@@ -40,7 +40,7 @@
 
 .labelTag {
   font-weight: 600;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B;
 }
 
 .login-container input[type="text"],
@@ -51,7 +51,7 @@
   border: unset;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B;
 }
 
 .login-container input:focus-visible {
@@ -61,12 +61,12 @@
 }
 
 .login-container input::placeholder {
-  color: #4B0082; /* Purple color */
+  color: #7BA05B;
   opacity: 0.7;
 }
 
 .login-container button {
-  background: linear-gradient(to bottom right, #4B0082, #000000); /* Gradient background */
+  background: #7BA05B; /* Gradient background */
   color: #fff; /* White text color */
   border: none;
   border-radius: 10px;
@@ -75,14 +75,14 @@
 }
 
 .login-container button:hover {
-  background: linear-gradient(to bottom right, #5a1a88, #484747); /* Gradient background for hover*/
+  background: #006400;
 }
 
 .forgot-password,
 .noAccount {
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B; /* Purple color */
 }
 
 .error-message {
@@ -193,14 +193,14 @@
 .forgotPassword {
   display: block;
   margin-top: 20px;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B; /* Purple color */
   cursor: pointer;
 }
 
 .noAccountDiv {
   display: block;
   margin-top: 5px;
-  color: #4B0082; /* Purple color */
+  color: #7BA05B; /* Purple color */
   cursor: pointer;
 }
 
@@ -226,9 +226,9 @@
 
 .flexBtns button {
   margin-right: 10px;
-  background: linear-gradient(to bottom right, #4B0082, #000000); /* Gradient background */
+  background: #7BA05B;
 }
 
 .flexBtns button {
-  background-color: #744a95;
+  background-color: #7BA05B;
 }

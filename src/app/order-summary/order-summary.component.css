@@ -1,11 +1,11 @@
 h2 {
     padding-top: 25px;
-    color: #4B0082;
+    color:#7BA05B;
     text-align: center; /* Center align the text */
 }
 
 .bigcontainer {
-    background: linear-gradient(to bottom, #4B0082, #000000);
+    background: black;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -34,7 +34,7 @@ h2 {
 
 .order-summary-title {
     text-align: center;
-    color: white;
+    color: #7BA05B;
 }
 .formDiv h3 {
     font-weight: bold;
@@ -56,24 +56,22 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
-    opacity: 0.7;
-}
-
-button[caption="deleteTicket"] {
-    background-color: #4B0082;
-    color: #fff;
-}
-
+button[caption="deleteTicket"],
 button[caption="checkout"],
 button[caption="updateOrder"] {
-    background-color: #4B0082;
+    background-color: #7BA05B;
     color: #fff;
+}
+
+button:hover {
+    opacity: 0.7;
+    background-color: #006400; /* Hover color */
 }
 
 button[caption="checkout"] {
     margin-right: 10px;
 }
+
 
 .actions {
     margin-top: 20px;
