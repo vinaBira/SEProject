@@ -1,6 +1,6 @@
 .headerWrapper
 {
-    background-color: #4B0082;
+    background-color: #7BA05B;
     overflow-x: hidden;
 }
 .headerLogo
@@ -12,13 +12,13 @@
 .textalignRight
 {
     text-align: right;
-    background-color: #4B0082;
+    background-color: #7BA05B;
     padding-bottom: 5px;
 }
 .navButton 
 {
     background-color: #fff;
-    color: #4B0082;
+    color: #7BA05B;
     margin-right: 10px;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -94,7 +94,7 @@
   
   /* Style for the button to toggle the dropdown */
   .dropbtn {
-    background-color: #4CAF50;
+    background-color: #6a4caf;
     color: white;
     padding: 12px;
     font-size: 16px;
