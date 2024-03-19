@@ -3,12 +3,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #4B0082, #000000); /* Gradient background */
+    background: black;
     min-height: 100vh;
 }
 
 .bigcontainer {
-    background: linear-gradient(to bottom, #4B0082, #000000);
+    background: black;
      width: 100%;
         margin: 0 auto;
         padding: 100px;
@@ -29,7 +29,7 @@ body {
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffffff; /* Change text color to white */
+    color:#7BA05B; /* Change text color to white */
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ p {
     font-size: 1.2em;
     margin: 10px 0;
     color: #ffffff; /* Change text color to white */
-            text-align: center;
+    text-align: center;
 
 }
 
@@ -59,7 +59,7 @@ p {
 
 .addBtn {
     color: #fff;
-    background-color: #4B0082; /* Change button color to match login page */
+    background-color: #7BA05B; /* Change button color to match login page */
     padding: 10px 20px;
     text-align: center;
     border: none;
@@ -72,5 +72,5 @@ p {
 }
 
 .addBtn:hover {
-    background-color: #744a95;
+    background-color: #006400;
 }
