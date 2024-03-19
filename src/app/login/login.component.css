@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: black;
+  background: #011631;
 }
 
 .loginMain {
@@ -11,12 +11,12 @@
 }
 
 .login-container {
-  background-color: #ffffff; 
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  background: rgba(128, 128, 128, 0.5); 
   width: 380px;
-  display: inline-block;
+  padding: 20px; 
+  border-radius: 5px; 
+  color: #fff; 
+  margin: auto;
 }
 
 .logoImgDiv {
@@ -31,16 +31,16 @@
   font-size: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
-  color: #7BA05B; 
+  color: #a0b3e2;
 }
 
 .login-container .form-group {
-  text-align: left;
+  color: #ffffff;
 }
 
 .labelTag {
   font-weight: 600;
-  color: #7BA05B;
+  color: #a0b3e2;
 }
 
 .login-container input[type="text"],
@@ -51,7 +51,7 @@
   border: unset;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
-  color: #7BA05B;
+  color: #a0b3e2;
 }
 
 .login-container input:focus-visible {
@@ -61,13 +61,13 @@
 }
 
 .login-container input::placeholder {
-  color: #7BA05B;
+  color: #ffffff; /* Match placeholder text color */
   opacity: 0.7;
 }
 
 .login-container button {
-  background: #7BA05B; /* Gradient background */
-  color: #fff; /* White text color */
+  background: #a0b3e2; 
+  color: #fff; 
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
@@ -75,14 +75,12 @@
 }
 
 .login-container button:hover {
-  background: #006400;
+  background: #011631;
 }
 
 .forgot-password,
 .noAccount {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #7BA05B; /* Purple color */
+  color:#ffffff;
 }
 
 .error-message {
@@ -193,14 +191,14 @@
 .forgotPassword {
   display: block;
   margin-top: 20px;
-  color: #7BA05B; /* Purple color */
+  color: #a0b3e2;
   cursor: pointer;
 }
 
 .noAccountDiv {
   display: block;
   margin-top: 5px;
-  color: #7BA05B; /* Purple color */
+  color: #a0b3e2;
   cursor: pointer;
 }
 
@@ -226,9 +224,9 @@
 
 .flexBtns button {
   margin-right: 10px;
-  background: #7BA05B;
+  background: #a0b3e2;
 }
 
 .flexBtns button {
-  background-color: #7BA05B;
+  background-color: #a0b3e2;
 }
