@@ -1,25 +1,25 @@
-.editProfile
-{
-    width: 800px;
-    background: #4B00823d;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 5px #f2f7fa;
-    margin: 30px auto;
+.editProfile {
+  width: 800px;
+  background: #011631;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 5px #f2f7fa;
+  margin: 30px auto;
+  color: #fff; /* Change text color to white */
 }
-.welcomeMessage
-{
-    height: 50px;
-    /* background: radial-gradient(#4B0082, #ffffff); */
-    background: #4B0082;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.welcomeMessage {
+  height: 50px;
+  background: #a0b3e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.welcomeMessage h2
-{
-    margin-bottom: 0;
-    color:#FFF;
+
+.welcomeMessage h2 {
+  margin-bottom: 0;
+  color: #fff; /* Change text color to white */
 }
+
 .formDiv
 {
     
@@ -38,6 +38,11 @@
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
+    background-color: #A0B3E2;
+    border-radius: 10px;
+
+
 }
 .formDiv .mb-3
 {
@@ -47,12 +52,17 @@
 .saveBtn
 {
     color: #FFF;
-    background-color: #4B0082;
+    background-color: #A0B3E2;
     padding: 10px 15px;
     text-align: center;
     border: unset;
     border-radius: 10px;
     margin-bottom: 15px;
+    display: inline-block;
+}
+
+.saveBtn:hover {
+  background-color: #032858; /* Change the background color on hover */
 }
 .confirmation-modal {
     position: fixed;
@@ -60,7 +70,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +156,7 @@
   }
   .modalText
   {
-    color: #4B0082;
+    color: #A0B3E2;
     margin:auto;
   }
   .cardDetails {
@@ -164,14 +173,14 @@
   }
   .paymentBtns[disabled] {
     background-color: #ccc; 
-    color: #4B0082; 
+    color: #A0B3E2; 
     cursor: not-allowed; 
     opacity: 0.9; 
   }
 
 .cardDetailsContent , .passwordChangeContent
 {
-    color: #4B0082; 
+    color: #A0B3E2; 
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -204,7 +213,7 @@
   padding: 15px;
   width: 100%;
   background: #FFF;
-  color: #4B0082;
+  color: #A0B3E2;
   font-weight: bold;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -215,7 +224,7 @@
 }
 .cardDetailsContent h2
 {
-    border-bottom: 1px solid #4B0082;
+    border-bottom: 1px solid #A0B3E2;
     font-weight: 800;
     margin: 5px;
     /* padding: 5px; */
@@ -228,7 +237,7 @@
 .paymentBtns
 {
     color: #FFF;
-    background-color: #4B0082;
+    background-color: #A0B3E2;
     padding: 5px 10px;
     text-align: center;
     border: unset;

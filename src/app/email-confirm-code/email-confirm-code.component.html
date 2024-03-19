@@ -8,13 +8,12 @@
         <p> Please enter the code sent to your email.</p>
         <form (ngSubmit)="submitConfirmationCode()" #confirmationForm="ngForm">
           <div class="form-group">
-            <label for="emailCode" class="labelTag">Confirmation Code</label>
             <input
               type="text"
               id="emailCode"
               name="emailCode"
               [(ngModel)]="emailCode"
-              placeholder="Enter the code"
+              placeholder="Confirmation Code"
               required
               #usernameInput="ngModel"
             >
