@@ -12,6 +12,7 @@ import { DatePipe } from '@angular/common';
     styleUrls: ['./checkout-ui.component.css']
 })
 export class CheckoutUiComponent {
+  logoImg = '../assets/img/Logo-SE.jpeg';
   movieTitle: string = 'Sample Movie';
   showTime: string = 'Show Time 1';
   selectedSeats: string[] = [];

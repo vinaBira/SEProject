@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { appApiServices } from '../services/app.services';
 import { NgModel } from '@angular/forms';
 
+declare var $: any; 
+
 
 // Custom validator function for password match
 function passwordMatchValidator(control: AbstractControl): { [key: string]: boolean } | null {
@@ -43,6 +45,23 @@ export class SignupComponent implements OnInit {
   // finalData1: any;
 
 
+  goToNextTab() {
+    // Implement your logic to navigate to the next tab here
+    const currentTab = document.querySelector('.nav-link.active');
+    const nextTab = currentTab?.parentElement?.nextElementSibling?.querySelector('.nav-link') as HTMLElement;
+    if (nextTab) {
+      nextTab.click(); // Programmatically click on the next tab
+    }
+  }
+
+  goToNextTab1() {
+    // Implement your logic to navigate to the next tab here
+    const currentTab = document.querySelector('.nav-link');
+    const nextTab = currentTab?.parentElement?.nextElementSibling?.querySelector('.nav-link') as HTMLElement;
+    if (nextTab) {
+      nextTab.click(); // Programmatically click on the next tab
+    }
+  }
 
   constructor(private router: Router, private fb: FormBuilder, private http: HttpClient, private appService: appApiServices) {
 

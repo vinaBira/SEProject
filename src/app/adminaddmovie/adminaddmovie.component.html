@@ -1,4 +1,3 @@
-<app-admin-header></app-admin-header>
 <div class="addMovieWrapper">
   <div class="addMovieMain">
     <div class="addMovie-container">
@@ -22,7 +21,6 @@
           <div *ngIf="submitted && f.movieTitle.errors" class="help-block">Movie Title is required</div>
         </div>
         
-
         <!-- Movie Category -->
         <div class="form-group" [class.has-error]="submitted && f.movieCategory.errors">
           <label for="movieCategory" class="labelTag">Movie Category<span class="mandatory">*</span></label>
@@ -36,215 +34,183 @@
           <div *ngIf="submitted && f.movieCategory.errors" class="help-block">Movie Category is required</div>
         </div>
   
-          <!-- Movie Director -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieDirector" class="labelTag">Movie Director</label>
-            <input class="form-control"
-              type="text"
-              id="movieDirector"
-              name="movieDirector"
-              formControlName="movieDirector"
-              placeholder="Movie Director Name"
-            >
+        <!-- Movie Director -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="movieDirector" class="labelTag">Movie Director</label>
+          <input class="form-control"
+            type="text"
+            id="movieDirector"
+            name="movieDirector"
+            formControlName="movieDirector"
+            placeholder="Movie Director Name"
+          >
+        </div>
+  
+        <!-- Movie Producer -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="movieProducer" class="labelTag">Movie Producer</label>
+          <input class="form-control"
+            type="text"
+            id="movieProducer"
+            name="movieProducer"
+            formControlName="movieProducer"
+            placeholder="Movie Producer Name"
+          >
+        </div>
+  
+        <!-- Movie Cast -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="movieCast" class="labelTag">Movie Cast</label>
+          <input class="form-control"
+            type="text"
+            id="movieCast"
+            name="movieCast"
+            formControlName="movieCast"
+            placeholder="Movie Cast Name(s)"
+            required
+          >
+        </div>
+  
+        <!-- Show Time -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="showTime" class="labelTag">Show Time</label>
+          <input class="form-control"
+            type="date"
+            id="showTime"
+            name="showTime"
+            formControlName="showTime"
+          >
+        </div> 
+  
+        <!-- Release Date -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="releaseDate" class="labelTag">Release Date<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="date"
+            id="releaseDate"
+            name="releaseDate"
+            formControlName="releaseDate"
+            required
+          >
+        </div>
+  
+        <!-- Synopsis -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="synopsis" class="labelTag">Synopsis<span class="mandatory">*</span></label>
+          <textarea class="form-control" 
+            id="synopsis"
+            name="synopsis"
+            formControlName="synopsis"
+            placeholder="Synopsis"
+            required
+          ></textarea>
+        </div>
+  
+        <!-- Reviews -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="reviews" class="labelTag">Reviews</label>
+          <textarea class="form-control" 
+            id="reviews"
+            name="reviews"
+            formControlName="reviews"
+            placeholder="Reviews"
+            required
+          ></textarea>
+        </div>
+        
+        <!-- Movie Language -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="language" class="labelTag">Movie Language<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="text"
+            id="language"
+            name="language"
+            formControlName="language"
+            placeholder="Language"
+            required
+          >
+          <div *ngIf="movieForm.get('movieForm')?.invalid && movieForm.get('movieForm')?.touched" class="error-message">
+            Please enter your First Name.
           </div>
+        </div>
   
-          <!-- Movie Producer -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieProducer" class="labelTag">Movie Producer</label>
-            <input class="form-control"
-              type="text"
-              id="movieProducer"
-              name="movieProducer"
-              formControlName="movieProducer"
-              placeholder="Movie Producer Name"
-            >
-          </div>
+        <!-- Trailer Link -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="trailerLink" class="labelTag">Trailer Link</label>
+          <input class="form-control"
+            type="text"
+            id="trailerLink"
+            name="trailerLink"
+            formControlName="trailerLink"
+            placeholder="Trailer Link"
+            required
+          >
+        </div>
   
-          <!-- Movie Cast -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="movieCast" class="labelTag">Movie Cast</label>
-            <input class="form-control"
-              type="text"
-              id="movieCast"
-              name="movieCast"
-              formControlName="movieCast"
-              placeholder="Movie Cast Name(s)"
-              required
-            >
-          </div>
+        <!-- Film Rating Code -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="filmRatingCode" class="labelTag">Film Rating Code</label>
+          <input class="form-control"
+            type="text"
+            id="filmRatingCode"
+            name="filmRatingCode"
+            formControlName="movieCertificationCode"
+            placeholder="Rating Code"
+          >
+        </div>
   
-          <!-- Show Time -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="showTime" class="labelTag">Show Time</label>
-            <input class="form-control"
-              type="date"
-              id="showTime"
-              name="showTime"
-              formControlName="showTime"
-            >
-          </div> 
+        <!-- Rating -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="rating" class="labelTag">Rating</label>
+          <input class="form-control"
+            type="number"
+            id="rating"
+            name="rating"
+            formControlName="rating"
+            placeholder="Rating"
+            required
+          >
+        </div>
   
-<!-- Release Date -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="releaseDate" class="labelTag">Release Date<span class="mandatory">*</span></label>
-  <input class="form-control"
-    type="date"
-    id="releaseDate"
-    name="releaseDate"
-    formControlName="releaseDate"
-    required
-  >
-</div>
+        <!-- Movie Availability Dropdown -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="movieAvailability" class="labelTag">Movie Availability<span class="mandatory">*</span></label>
+          <select class="form-control" id="movieAvailability" name="movieAvailability" formControlName="movieAvailability" required>
+            <option value="0">Currently Playing</option>
+            <option value="1">Coming Soon</option>
+            <option value="2">Already Played</option>
+          </select>
+        </div>
   
-<!-- Synopsis -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="synopsis" class="labelTag">Synopsis<span class="mandatory">*</span></label>
-  <textarea class="form-control" 
-    id="synopsis"
-    name="synopsis"
-    formControlName="synopsis"
-    placeholder="Synopsis"
-    required
-  ></textarea>
-</div>
+        <!-- Poster Source -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="posterSrc" class="labelTag">Poster Source<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="text"
+            id="posterSrc"
+            name="posterSrc"
+            formControlName="posterSrc"
+            placeholder="Poster URL"
+            required
+          >
+        </div>
   
-          <!-- Reviews -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="reviews" class="labelTag">Reviews</label>
-            <textarea class="form-control" 
-              id="reviews"
-              name="reviews"
-              formControlName="reviews"
-              placeholder="Reviews"
-              required
-            >
-          </textarea>
-            
-          </div>
-<!-- Movie Language -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="language" class="labelTag">Movie Language<span class="mandatory">*</span></label>
-  <input class="form-control"
-    type="text"
-    id="language"
-    name="language"
-    formControlName="language"
-    placeholder="Language"
-    required
-  >
-  <div *ngIf="movieForm.get('movieForm')?.invalid && movieForm.get('movieForm')?.touched" class="error-message">
-    Please your First Name.
-</div>
-</div>
+        <!-- Banner Source -->
+        <div class="form-group" [formGroup]="movieForm">
+          <label for="bannerSrc" class="labelTag">Banner Source<span class="mandatory">*</span></label>
+          <input class="form-control"
+            type="text"
+            id="BannerSrc"
+            name="BannerSrc"
+            formControlName="bannerSrc"
+            placeholder="Banner URL"
+            required
+          >
+        </div>
 
-  
-          <!-- Trailer Link -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="trailerLink" class="labelTag">Trailer Link</label>
-            <input class="form-control"
-              type="text"
-              id="trailerLink"
-              name="trailerLink"
-              formControlName="trailerLink"
-              placeholder="Trailer Link"
-              required
-            >
-          </div>
-  
-          <!-- Film Rating Code -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="filmRatingCode" class="labelTag">Film Rating Code</label>
-            <input class="form-control"
-              type="text"
-              id="filmRatingCode"
-              name="filmRatingCode"
-              formControlName="movieCertificationCode"
-              placeholder="Rating Code"
-            >
-          </div>
-  
-          <!-- Rating -->
-          <div class="form-group" [formGroup]="movieForm">
-            <label for="rating" class="labelTag">Rating</label>
-            <input class="form-control"
-              type="number"
-              id="rating"
-              name="rating"
-              formControlName="rating"
-              placeholder="Rating"
-              required
-            >
-          </div>
-
- <!-- Movie Availability Dropdown -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="movieAvailability" class="labelTag">Movie Availability<span class="mandatory">*</span></label>
-  <select class="form-control" id="movieAvailability" name="movieAvailability" formControlName="movieAvailability" required>
-    <option value="0">Currently Playing</option>
-    <option value="1">Coming Soon</option>
-    <option value="2">Already Played</option>
-  </select>
-</div>
-  
-<!-- Poster Source -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="posterSrc" class="labelTag">Poster Source<span class="mandatory">*</span></label>
-  <input class="form-control"
-    type="text"
-    id="posterSrc"
-    name="posterSrc"
-    formControlName="posterSrc"
-    placeholder="Poster URL"
-    required
-  >
-</div>
-  
-<!-- Banner Source -->
-<div class="form-group" [formGroup]="movieForm">
-  <label for="bannerSrc" class="labelTag">Banner Source<span class="mandatory">*</span></label>
-  <input class="form-control"
-    type="text"
-    id="BannerSrc"
-    name="BannerSrc"
-    formControlName="bannerSrc"
-    placeholder="Banner URL"
-    required
-  >
-</div>
-<form (ngSubmit)="onSubmit()" class="addMovieForm" [formGroup]="movieForm" novalidate>
-  <div class="form-group" [class.has-error]="submitted && f.movieTitle.errors">
-    <label for="movieTitle" class="labelTag">Movie Title<span class="mandatory">*</span></label>
-    <input class="form-control"
-      type="text"
-      id="movieTitle"
-      name="movieTitle"
-      formControlName="movieTitle"
-      placeholder="Movie Title"
-    >
-    <div *ngIf="submitted && f.movieTitle.errors" class="help-block">Movie Title is required</div>
+        <!-- Submit Button -->
+        <button type="submit" class="addButton">Add Movie</button>
+      </form>
+    </div>
   </div>
-
-  <div class="form-group" [class.has-error]="submitted && f.releaseDate.errors">
-    <label for="releaseDate" class="labelTag">Release Date<span class="mandatory">*</span></label>
-    <input class="form-control"
-      type="date"
-      id="releaseDate"
-      name="releaseDate"
-      formControlName="releaseDate"
-    >
-    <div *ngIf="submitted && f.releaseDate.errors" class="help-block">Release Date is required</div>
-  </div>
-
-  <!-- Repeat this pattern for each form field -->
-
-  <button type="submit" class="addButton">Add Movie</button>
-</form>
-
-
-  
-  
-  
-  
-  
-  
-  
+</div>

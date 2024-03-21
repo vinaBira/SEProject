@@ -84,7 +84,7 @@ export class BuyTicketsComponent {
   movieDetails : any[] = [];
   finalBookingFormData : FormGroup;
   reservedShowId : any;
-  reservedSeatsList : any;
+  reservedSeatsList : any[] = [];
   checkUserLoginStatus : any;
 
   constructor(private fb: FormBuilder,private dataSharingService: DataSharingService, private appService: appApiServices, private dialog: MatDialog, private route: ActivatedRoute, private router: Router) {

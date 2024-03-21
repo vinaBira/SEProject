@@ -1,4 +1,4 @@
-<app-header></app-header>
+
 <div class="checkoutContainerMain" [class.loading]="loading">
   <form>
     <div class="container">
@@ -19,6 +19,13 @@
           <div class="paymentDetailsDiv">
             <div class="flexBtns">
               <h1>Payment Methods</h1>
+              <!-- Text boxes for card details -->
+              <div class="card-details">
+                <input type="text" placeholder="Card Number" class="form-control">
+                <input type="text" placeholder="Card Name" class="form-control">
+                <input type="text" placeholder="Expiry Date" class="form-control">
+                <input type="text" placeholder="CVV" class="form-control">
+              </div>
               <button class="paymentBtns center-align" (click)="toggleAddCardDetails()" [disabled]="hasReachedCardLimit()">
                 <i class="fa fa-plus"></i> Add a New Card
               </button>
