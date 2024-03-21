@@ -31,7 +31,6 @@
   font-size: 20px;
   margin-bottom: 20px;
   margin-top: 5px;
-  color: #a0b3e2;
 }
 
 .login-container .form-group {
@@ -51,7 +50,7 @@
   border: unset;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
-  color: #a0b3e2;
+  color: black;
 }
 
 .login-container input:focus-visible {
@@ -61,7 +60,6 @@
 }
 
 .login-container input::placeholder {
-  color: #ffffff; /* Match placeholder text color */
   opacity: 0.7;
 }
 
