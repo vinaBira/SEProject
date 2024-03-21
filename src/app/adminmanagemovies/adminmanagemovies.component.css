@@ -18,7 +18,7 @@
 .addButton
 {
   color: #FFF;
-  background-color: #4B0082;
+  background-color: #a0b3e2;
   padding: 10px 15px;
   text-align: center;
   border: unset;
@@ -27,7 +27,7 @@
 }
 
 .addButton:hover {
-  background-color: #744a95;
+  background-color: #011631;
 }
 
 .moviesListManage
@@ -44,7 +44,7 @@ text-align: left;
 }
 
 .manageMoviesButton-container button {
-  background-color: #4B0082;
+  background-color: #a0b3e2;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -143,7 +143,7 @@ background: transparent;
 }
 .showTimeBtns i
 {
-color: #4B0082;
+color: #a0b3e2;
 }
 .confirmation-text-2 {
 font-size: 16px;
@@ -152,7 +152,7 @@ font-size: 16px;
 .login-container button:disabled {
 background-color: #813ba1; /* Change the background color */
 color: #000; /* Change the text color */
-cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+cursor: not-allowed; /* not clickable cursor */
 }
 /* Style for error content */
 .error-content {
@@ -186,7 +186,7 @@ background-color: #fff;
 border-radius: 5px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 padding: 20px;
-color:#744a95;
+color:#011631;
 text-align: center;
 position: relative; /* Relative positioning for close button */
 }

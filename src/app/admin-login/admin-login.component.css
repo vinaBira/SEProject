@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #4B0082;
+  background-color: #011631;
 }
 
 .loginMain {
@@ -11,7 +11,7 @@
 }
 
 .login-container {
-  background-color: #fff;
+  background-color: rgba(128, 128, 128, 0.5);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -27,6 +27,7 @@
 }
 
 .loginField {
+  color: #a0b3e2;
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 20px;
@@ -38,6 +39,7 @@
 }
 
 .labelTag {
+  color: #a0b3e2;
   font-weight: 600;
 }
 
@@ -49,7 +51,6 @@
   border: unset;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
-  color: #4B0082;
 }
 
 .login-container input:focus-visible {
@@ -59,12 +60,11 @@
 }
 
 .login-container input::placeholder {
-  color: #4B0082;
   opacity: 0.7;
 }
 
 .login-container button {
-  background-color: #4B0082;
+  background-color: #a0b3e2;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -74,7 +74,7 @@
 }
 
 .login-container button:hover {
-  background-color: #744a95;
+  background-color: #011631;
 }
 
 .forgot-password {
@@ -133,8 +133,8 @@
 }
 /* Style for disabled buttons with a specific class */
 .login-container button:disabled {
-  background-color: #ccc; /* Change the background color */
-  color: #000; /* Change the text color */
+  background-color: rgb(100, 100, 105); /* Change the background color */
+  color: #fff;
   cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
 }
 /* Style for error content */

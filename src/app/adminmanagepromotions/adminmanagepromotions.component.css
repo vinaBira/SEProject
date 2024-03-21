@@ -18,7 +18,7 @@
 .addBtn
 {
   color: #FFF;
-  background-color:#4B0082;
+  background-color:#a0b3e2;
   padding: 10px 15px;
   text-align: center;
   border: unset;
@@ -27,7 +27,7 @@
 }
 
 .addBtn:hover {
-  background-color: #744a95;
+  background-color: #011631;
 }
 .promotionsListManage
 {
