@@ -56,8 +56,8 @@ export class SignupComponent implements OnInit {
 
   goToNextTab1() {
     // Implement your logic to navigate to the next tab here
-    const currentTab = document.querySelector('.nav-link');
-    const nextTab = currentTab?.parentElement?.nextElementSibling?.querySelector('.nav-link') as HTMLElement;
+    const currentTab = document.querySelector('.nav-item.active');
+    const nextTab = currentTab?.nextElementSibling?.querySelector('.nav-link') as HTMLElement;
     if (nextTab) {
       nextTab.click(); // Programmatically click on the next tab
     }
