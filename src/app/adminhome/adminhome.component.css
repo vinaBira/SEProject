@@ -37,7 +37,7 @@
 .addBtn
 {
   color: #FFF;
-  background-color: #4B0082;
+  background-color: #a0b3e2;
   padding: 10px 15px;
   text-align: center;
   border: unset;
@@ -46,7 +46,7 @@
 }
 
 .addBtn {
-  background-color: #744a95;
+  background-color: #a0b3e2;
 }
 
 .moviesListManage
@@ -76,11 +76,13 @@ transition: 0.3s;
 
 
 .tab button:hover {
-background-color: #e3cef2;
+background-color: #a0b3e2;
+color: white;
 }
 
 .tab button.active {
-background-color: #c8a6e1;
+background-color: #6f7fa6;
+color: white;
 }
 
 .adminHomeButton-container .form-group {
@@ -89,7 +91,7 @@ background-color: #c8a6e1;
 
 
 .adminHomeButton-container button {
-  background-color: #4B0082;
+  background-color: #a0b3e2;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -98,5 +100,5 @@ background-color: #c8a6e1;
 }
 
 .adminHomeButton-container button:hover {
-  background-color: #4B0082;
+  background-color: #a0b3e2;
 }
