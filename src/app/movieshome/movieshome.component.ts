@@ -11,6 +11,8 @@ export class MovieshomeComponent implements OnInit {
 
   searchLogo = "../assets/img/searchIcon.png";
   filterLogo = "../assets/img/filterIcon.png";
+  imageUrl: string = 'assets/images/background.jpg'; // Set your image path dynamically
+  opacity: number = 0.5;
 
   searchText: string = "";
   searchData: string = '';

@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #011631;
+  background: linear-gradient(to bottom, #93a9e1, #010e1e);
 }
 
 .loginMain {
@@ -11,12 +11,13 @@
 }
 
 .login-container {
-  background: rgba(128, 128, 128, 0.5); 
+  background: #fff;
   width: 380px;
   padding: 20px; 
   border-radius: 5px; 
   color: #fff; 
   margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .logoImgDiv {
@@ -39,7 +40,7 @@
 
 .labelTag {
   font-weight: 600;
-  color: #a0b3e2;
+  color: #010e1e;
 }
 
 .login-container input[type="text"],
@@ -64,7 +65,7 @@
 }
 
 .login-container button {
-  background: #a0b3e2; 
+  background: #7b8bb3; 
   color: #fff; 
   border: none;
   border-radius: 10px;
@@ -189,14 +190,14 @@
 .forgotPassword {
   display: block;
   margin-top: 20px;
-  color: #a0b3e2;
+  color: #010e1e;
   cursor: pointer;
 }
 
 .noAccountDiv {
   display: block;
   margin-top: 5px;
-  color: #a0b3e2;
+  color: #010e1e;
   cursor: pointer;
 }
 
@@ -222,9 +223,9 @@
 
 .flexBtns button {
   margin-right: 10px;
-  background: #a0b3e2;
+  background: #010e1e;
 }
 
 .flexBtns button {
-  background-color: #a0b3e2;
+  background-color: #010e1e;
 }

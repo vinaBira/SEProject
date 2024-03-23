@@ -1,6 +1,6 @@
 .headerWrapper
 {
-    background-color: #a0b3e2;
+    background-color: #010e1e;
     overflow-x: hidden;
 }
 .headerLogo
@@ -12,7 +12,7 @@
 .textalignRight
 {
     text-align: right;
-    background-color: #a0b3e2;
+    background-color: #010e1e;
     padding-bottom: 5px;
 }
 .navButton 
