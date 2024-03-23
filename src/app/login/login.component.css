@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #93a9e1, #010e1e);
 }
 
 .loginMain {
@@ -12,7 +12,7 @@
 
 .login-container {
   background: #fff;
-  width: 380px;
+  width: 780px;
   padding: 20px; 
   border-radius: 5px; 
   color: #fff; 
@@ -183,13 +183,13 @@
 
 .supClass {
   color: #f62e2e;
-  font-size: 90%;
   top: -0.3em;
 }
 
 .forgotPassword {
   display: block;
   margin-top: 20px;
+  font-size: 18px;
   color: #010e1e;
   cursor: pointer;
 }
@@ -197,6 +197,7 @@
 .noAccountDiv {
   display: block;
   margin-top: 5px;
+  font-size: 18px;
   color: #010e1e;
   cursor: pointer;
 }

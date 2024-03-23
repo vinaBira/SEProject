@@ -1,5 +1,6 @@
 .orderHistoryDiv {
     min-height: 85vh;
+    font-size: 18px;
 }
 
 .activeOrdersList,

@@ -17,7 +17,7 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 24px; }
 
 ::-webkit-scrollbar {
     width: 10px; /* Set the width of the scrollbar */

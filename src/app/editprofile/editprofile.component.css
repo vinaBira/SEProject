@@ -5,6 +5,7 @@
   box-shadow: 2px 2px 2px 5px #f2f7fa;
   margin: 30px auto;
   color: #fff; /* Change text color to white */
+  font-size: 18px;
 }
 
 .welcomeMessage {
@@ -18,6 +19,7 @@
 .welcomeMessage h2 {
   margin-bottom: 0;
   color: #fff; /* Change text color to white */
+  font-size: 30px;
 }
 
 .formDiv

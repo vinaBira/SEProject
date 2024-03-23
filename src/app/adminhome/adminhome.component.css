@@ -2,6 +2,7 @@
   background-color: #fff;
   margin: 20px;
   box-shadow: 2px 2px 2px 5px #f2f7fa;
+  font-size: 18px;
 }
 
 .adminHomeMain {
@@ -15,6 +16,7 @@
   padding: 20px;
   width: 380px;
   display: inline-block;
+  font-size: 18px;
 }
 
 .movieHeader
@@ -52,6 +54,7 @@
 .moviesListManage
 {
 margin-top: 20px;
+font-size: 18px;
 }
 .textAlignL
 {

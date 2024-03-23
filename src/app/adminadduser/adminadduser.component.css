@@ -1,12 +1,15 @@
 .addUserWrapper
 {
-    width: 600px;
+    width: 700px;
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 5px;
     padding: 20px;
     margin: 40px auto; 
     margin-top: 100px;
     color: #a0b3e2;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
 }
 .welcomeMessage
 {
@@ -18,11 +21,13 @@
     align-items: center;
     margin: 20px 0px;
     border-radius: 5px;
+    font-size: 30px;
 }
 .welcomeMessage h2
 {
     margin-top: 10px;
     font-weight: 800;
+    font-size: 30px;
 }
 .addUserForm
 {
