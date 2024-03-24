@@ -2,23 +2,13 @@
 <div class="movieInfoWrapper">
     <div class="bannerDiv">
         <img src="{{movieList.bannerSrc}}" class="bannerBg">
-        
     </div>
-    <div class="movieDetailsDiv">   
+    <div class="movieDetailsDiv">
         <div class="movieInfo">
             <h3 class="movieTitle">{{movieList.movieTitle}}</h3>
             <p class="ratingField">Rating: {{movieList.rating}} / 10</p>
             <p class="durationField">{{movieList.releaseDate}} | <span class="genereType">{{movieList.movieCategory}} </span> </p>
             
-            <div class="btnsForMovie">
-                <div class="trailerLink">
-                    <button class="movieBtn playTrailer" (click)="openIframeDialog(iframeUrl)" matTooltip="Play movie trailor!">Play Trailer</button>
-                </div>
-                <div class="bookNowOption">
-                    <button class="movieBtn bookTicketBtn" [routerLink]="['/buy-tickets', movieList.movieTitle]" matTooltip="Book a movie ticket!">Book Ticket</button>
-                </div>
-            </div>
-
             <h3 class="aboutHeading">About the Movie</h3>
             <div class="movieSynopsis">
                 <p>{{movieList.synopsis}}</p>
@@ -31,6 +21,15 @@
                 <h4 class="castSubheading">Producer(s)</h4>
                 <p>{{movieList.movieProducer}}</p>
             </div>     
+
+            <div class="btnsForMovie">
+                <div class="trailerLink">
+                    <button class="movieBtn playTrailer" (click)="openIframeDialog(iframeUrl)" matTooltip="Play movie trailer!">Play Trailer</button>
+                </div>
+                <div class="bookNowOption">
+                    <button class="movieBtn bookTicketBtn" [routerLink]="['/buy-tickets', movieList.movieTitle]" matTooltip="Book a movie ticket!">Book Ticket</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
