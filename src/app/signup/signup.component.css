@@ -83,7 +83,7 @@
 }
 
 .signUp-container button:hover {
-  background-color: #424d6a;
+  background-color: #010e1e;
   color: white;
 }
 .subscribeDiv
@@ -176,7 +176,7 @@
 {
   display: block;
   margin-top: 20px;
-  color: #a0b3e2;
+  color: #010e1e;
   cursor: pointer;
   
 }
