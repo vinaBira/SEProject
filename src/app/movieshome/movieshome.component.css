@@ -28,7 +28,7 @@
 }
 
 .categoryBtn.active {
-  background-color: #a0b3e2; /* Purple-black */
+  background-color: #011631; 
   color: #FFF;
   padding: 8px 15px;
   margin-right: 5px;
@@ -40,14 +40,13 @@
 }
 
 .categoryBtn {
-  color: #FFF; /* Purple-black */
-  background-color: #011631; /* Purple-black */
+  color: #FFF; 
+  background-color: #a0b3e2;
   padding: 8px 15px;
   margin-right: 5px;
   border: unset;
   border-radius: 5px;
   font-weight: 600;
-  box-shadow: 1px 1px 3px 2px #c1d8e6;
   width: 185px;
 }
 
