@@ -1,10 +1,10 @@
 .editProfile {
   width: 800px;
-  background: #011631;
+  background: rgba(128, 128, 128, 0.5);
+  opacity: 0.9;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 5px #f2f7fa;
   margin: 30px auto;
-  color: #fff; /* Change text color to white */
+  color: white; /* Change text color to white */
 }
 
 .welcomeMessage {
@@ -12,6 +12,8 @@
   background: #a0b3e2;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
+
   align-items: center;
 }
 
@@ -62,7 +64,7 @@
 }
 
 .saveBtn:hover {
-  background-color: #032858; /* Change the background color on hover */
+  background-color: #011631; /* Change the background color on hover */
 }
 .confirmation-modal {
     position: fixed;
