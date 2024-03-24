@@ -4,7 +4,7 @@
   opacity: 0.9;
   border-radius: 5px;
   margin: 30px auto;
-  color: white; /* Change text color to white */
+  color: #fff; /* Change text color to white */
 }
 
 .welcomeMessage {
@@ -20,6 +20,7 @@
 .welcomeMessage h2 {
   margin-bottom: 0;
   color: #fff; /* Change text color to white */
+  font-size: 30px;
 }
 
 .formDiv

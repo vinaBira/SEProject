@@ -4,6 +4,7 @@
   align-items: center;
   min-height: 90vh;
   background-color: #011631;
+  font-size: 18px;
 }
 
 .loginMain {
@@ -15,7 +16,7 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  width: 380px;
+  width: 780px;
   display: inline-block;
 }
 
@@ -56,7 +57,7 @@
 .login-container input:focus-visible {
   border: unset;
   outline: unset;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #19378a;
 }
 
 .login-container input::placeholder {
@@ -133,9 +134,8 @@
 }
 /* Style for disabled buttons with a specific class */
 .login-container button:disabled {
-  background-color: rgb(100, 100, 105); /* Change the background color */
-  color: #fff;
-  cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+  background-color: #748ed1; /* Change the background color */
+  color: #fff; /* Change the cursor to indicate it's not clickable */
 }
 /* Style for error content */
 .error-content {

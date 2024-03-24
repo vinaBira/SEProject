@@ -4,6 +4,7 @@ body {
     color: #000; /* Setting text color to black */
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 .container {
@@ -144,7 +145,7 @@ select {
 }
 
 button {
-    background-color: #a0b3e2;
+    background-color: #5d80d8;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -178,7 +179,7 @@ button:hover {
 }
 
 .counterBtn {
-    background-color: #a0b3e2;
+    background-color: #5d80d8;
     color: white;
     border: none;
     border-radius: 4px;
@@ -269,7 +270,7 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 600px; /* Increasing size */
+    max-width: 700px; /* Increasing size */
     max-height: 800px; /* Increasing size */
     overflow: hidden; /* Hide overflowing content */
     text-align: center;
@@ -327,7 +328,7 @@ button:hover {
   }
   
   .popup-content {
-    background:  rgb(158, 147, 147);
+    background:  rgb(178, 186, 201);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 

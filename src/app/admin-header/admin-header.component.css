@@ -2,6 +2,7 @@
 {
   background-color: #a0b3e2;
   overflow-x: hidden;
+  font-size: 18px;
 }
 .headerLogo
 {
@@ -45,6 +46,7 @@
 .dropdown {
     float: left;
     overflow: hidden;
+    font-size: 18px;
   }
   
   .dropdown .dropbtn {
@@ -56,6 +58,7 @@
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    font-size: 18px;
   }
   
   .dropdown-content {
