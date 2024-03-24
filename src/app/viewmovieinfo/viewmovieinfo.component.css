@@ -1,86 +1,83 @@
+.movieInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bannerDiv {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+
 .bannerBg {
     width: 100%;
     height: 300px;
-    z-index: -1;
-    opacity: 0.6;
-    /* border-radius: 10px; */
-}
-
-.posterBg {
-    width: 300px;
-    height: 340px;
-    z-index: 0;
-    position: absolute;
-    top: 20%;
-    left: 2%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .movieDetailsDiv {
     width: 780px;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    border: 1px solid #eee;
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.5);
     border-radius: 10px;
-    padding: 10px 25px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .movieTitle {
-    font-weight: 900;
+    font-weight: bold;
     font-size: 24px;
+    color: #a0b3e2;
 }
 
 .ratingField {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
+    color: #a0b3e2;
 }
 
 .durationField, .genereType {
     font-size: 14px;
+    color: #a0b3e2;
 }
 
 .aboutHeading {
-    font-weight: 900;
-    margin-bottom: 5px;
-    border-bottom: 1px solid #ccc;
+    font-weight: bold;
     font-size: 20px;
+    color: #a0b3e2;
+    margin: 20px 0;
     padding-bottom: 10px;
-    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 .castSubheading {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: bold;
+    color: #a0b3e2;
     margin-bottom: 5px;
 }
 
 .btnsForMovie {
     display: flex;
-    align-items: center;
-}
-
-.trailerLink {
-    width: 20%;
-}
-
-.bookNowOption {
-    width: 20%;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .movieBtn {
     color: #FFF;
-    background-color: #4B0082; /* Purple-black */
+    background-color: #a0b3e2;
     padding: 10px 15px;
     text-align: center;
-    border: unset;
+    border: none;
     border-radius: 10px;
-    margin-bottom: 15px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Hover state */
 .movieBtn:hover {
-    background-color:#744a95; /* New color on hover */
-  }
+    background-color: #011631;
+}
