@@ -7,6 +7,25 @@
   color: #fff; /* Change text color to white */
 }
 
+#exampleInputEmail1.read-only {
+  color: #6c757d; /* Gray color */
+  background-color: #f8f9fa; /* Light gray background */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+.changePasswordBtn {
+  background-color: #A0B3E2; /* Blue color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 10px; /* Add padding */
+  cursor: pointer; /* Add cursor pointer on hover */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+.changePasswordBtn:hover {
+  background-color: #5772b5; /* Darker blue color on hover */
+}
+
 .welcomeMessage {
   height: 50px;
   background: #a0b3e2;
