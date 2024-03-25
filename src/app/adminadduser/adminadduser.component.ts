@@ -16,7 +16,7 @@ export class AdminadduserComponent implements OnInit {
         userID: null,
         email: [''],
         password: [''],
-        userRole :null
+        userRole : 0
     });
   }
   ngOnInit(): void {

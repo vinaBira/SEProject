@@ -57,12 +57,12 @@ export class LoginComponent {
       "verificationCode": null
     };
 
-    this.httpClient.post('http://localhost:3200/getCustomer', cred).subscribe(
+    this.httpClient.post('http://localhost:8080/getCustomer', cred).subscribe(
       (response: any) => {
         if (response[200]) 
         {
           this.verificationCustomerData = response[200].customer;
-          if (response[200].customer.customerStatusID == "Active") 
+          if (response[200].customer.customerStatusID == "ACTIVE") 
           {
             this.verificationUnSuccessful = false;
             this.isLoginSuccessful = true;
@@ -138,7 +138,7 @@ export class LoginComponent {
     confirmationData.verificationCode = this.verificationCode;
     console.log("Verification Code", this.verificationCode);
     console.log("confirmationData", confirmationData);
-    this.httpClient.post('http://localhost:3200/verifyCustomer', confirmationData).subscribe(
+    this.httpClient.post('http://localhost:8080/verifyCustomer', confirmationData).subscribe(
       (response: any) => {
         console.log('Email confirmation successful', response);
         this.verificationUnSuccessful = false;

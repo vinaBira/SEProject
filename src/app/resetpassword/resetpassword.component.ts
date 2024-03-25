@@ -53,7 +53,7 @@ export class ResetpasswordComponent implements OnInit {
     };
     if (this.signupForm.valid) {
       if (formData.password === formData.confirmPassword) {
-        this.http.post('http://localhost:3200/changePassword', updatedPwdData).subscribe((response: any) => {
+        this.http.post('http://localhost:8080/changePassword', updatedPwdData).subscribe((response: any) => {
           console.log("Password Changed", response);
           this.router.navigate(['/login']);
           localStorage.removeItem('forgotUserEmailID');

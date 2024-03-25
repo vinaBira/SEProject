@@ -35,11 +35,11 @@ export class ForgotpasswordComponent implements OnInit {
       this.appService.forgotPasswordData(formData).subscribe(
         (response: any) => {
           this.isAccountCreationSuccessful = true;
-          this.verificationCustomerData = response;
+          this.verificationCustomerData = response['200'];
           this.verificationUnSuccessful = true;
           // const userID = response.userID;
-          console.log('forgot password data', response);
-          localStorage.setItem("forgotUserEmailID", response.email);
+          console.log('forgot password data', response[200]);
+          localStorage.setItem("forgotUserEmailID", response[200].email);
         },
         (error) => {
           this.isAccountCreationSuccessful = false;
@@ -57,10 +57,10 @@ export class ForgotpasswordComponent implements OnInit {
 
   submitConfirmationCode() {
     const confirmationData = this.verificationCustomerData;
-    confirmationData.verificationCode = this.verificationCode;
+    // confirmationData.verificationCode = this.verificationCode;
     console.log("Verification Code", this.verificationCode);
     console.log("confirmationData", confirmationData);
-    this.http.post('http://localhost:3200/verifyCustomer', confirmationData).subscribe(
+    this.http.post('http://localhost:8080/verifyCustomer', confirmationData).subscribe(
       (response: any) => {
         this.verificationUnSuccessful = false;
         this.router.navigate(['/resetPassword']);

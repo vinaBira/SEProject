@@ -119,7 +119,7 @@ export class CheckoutUiComponent {
     };
  
 
-    this.http.post('http://localhost:3200/getCustomer', cred)
+    this.http.post('http://localhost:8080/getCustomer', cred)
       .subscribe((data: any) => {
         this.userData = data[200];
         this.customerData = this.userData.customer;
@@ -138,7 +138,7 @@ export class CheckoutUiComponent {
     const addCardDet = this.userCardDetails.value;
    addCardDet.userID = this.cardUserID;
    this.showAddCardDetails = false;
-    this.http.post('http://localhost:3200/addCard', addCardDet)
+    this.http.post('http://localhost:8080/addCard', addCardDet)
     .subscribe((data: any) => {
       this.paymentData = data[200];
       console.log("Card Data", this.paymentData);

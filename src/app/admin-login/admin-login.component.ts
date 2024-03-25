@@ -34,7 +34,7 @@ export class AdminLoginComponent {
       "password": this.password,        
     };
 
-    this.http.post('http://localhost:3200/getAdmin', cred).subscribe(
+    this.http.post('http://localhost:8080/getAdmin', cred).subscribe(
       (response: any) => {
         if (response) {
           this.isLoginSuccessful = true;

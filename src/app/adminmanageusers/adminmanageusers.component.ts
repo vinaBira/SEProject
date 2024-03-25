@@ -36,7 +36,7 @@ export class AdminmanageusersComponent implements OnInit {
   }
   getUsers()
   {
-    this.http.get('http://localhost:3200/getAllcustomers').subscribe((response : any) =>{
+    this.http.get('http://localhost:8080/getAllcustomers').subscribe((response : any) =>{
       this.userData = response;
     });
   }
@@ -97,12 +97,12 @@ export class AdminmanageusersComponent implements OnInit {
        const editingCustomerData = response.customer;
        const editingUserStatus = editingCustomerData.customerStatusID;
         console.log("Data of user to be edited", editingCustomerData.customerStatusID);
-        if(editingUserStatus === "Active")
+        if(editingUserStatus === "ACTIVE")
         {
           this.showActiveUserPopup = true;
           this.userStatusChangeID = editingCustomerData.userID;
         }
-        else if(editingUserStatus === "InActive")
+        else if(editingUserStatus === "INACTIVE")
         {
           this.showInactiveUserPopup = true;
           this.userStatusChangeID = editingCustomerData.userID;

@@ -69,13 +69,13 @@ export class MovieshomeComponent implements OnInit {
 
   getNowShowingMovies(): any[] {
     return this.movieList.filter((movie: any) => {
-      return movie.movieAvailability === "CurrentlyRunning" && (this.searchText === '' || this.isTitleMatch(movie.movieTitle));
+      return movie.movieAvailability === "CURRENTLY_RUNNING" && (this.searchText === '' || this.isTitleMatch(movie.movieTitle));
     });
   }
 
   getUpcomingMovies(): any[] {
     return this.movieList.filter((movie: any) => {
-      return movie.movieAvailability === "ComingSoon" && (this.searchText === '' || this.isTitleMatch(movie.movieTitle));
+      return movie.movieAvailability === "COMING_SOON" && (this.searchText === '' || this.isTitleMatch(movie.movieTitle));
     });
   }
 
@@ -104,13 +104,13 @@ export class MovieshomeComponent implements OnInit {
 
   getNowShowingMoviesFiltered(): any[] {
     return this.movieList.filter((movie: any) => {
-      return movie.movieAvailability === "CurrentlyRunning" && this.selectedCategories.includes(movie.movieCategory);
+      return movie.movieAvailability === "CURRENTLY_RUNNING" && this.selectedCategories.includes(movie.movieCategory);
     });
   }
 
   getUpcomingMoviesFiltered(): any[] {
     return this.movieList.filter((movie: any) => {
-      return movie.movieAvailability === "ComingSoon" && this.selectedCategories.includes(movie.movieCategory);
+      return movie.movieAvailability === "COMING_SOON" && this.selectedCategories.includes(movie.movieCategory);
     });
   }
 }
