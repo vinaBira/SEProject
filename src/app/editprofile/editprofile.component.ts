@@ -54,6 +54,10 @@ export class EditprofileComponent implements OnInit {
     });
   }
 
+  navigateToForgotPassword() {
+    this.router.navigate(['/forgot-password']);
+  }
+
   ngOnInit(): void {
     // Fetch user data from the API
     this.fetchUserData();

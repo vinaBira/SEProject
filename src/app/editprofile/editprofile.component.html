@@ -10,12 +10,14 @@
             <h3>Account Details</h3>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <p class="form-control" id="exampleInputEmail1">{{ customerData.email }}</p>
+              <p class="form-control read-only" id="exampleInputEmail1" style="color: #6c757d;">{{ customerData.email }}</p>
           </div>          
                 
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input
+              <label for="exampleInputPassword1" class="form-label">Password :</label>
+              <button type="button" (click)="navigateToForgotPassword()" class="changePasswordBtn">Change Password?</button>
+              <!-- <a routerLink="/forgot-password" class="forgotPassword"> Change Password?</a> -->
+              <!-- <input
                 type="password"
                 class="form-control"
                 id="exampleInputPassword1"
@@ -23,7 +25,7 @@
                 name="password"
                 [readonly]="!isEditingPassword"
                 (click)="openPasswordChangePopup()"
-              >
+              > -->
               <!-- <i class="fa fa-pencil"></i>  -->
             </div>
          <!-- password-change.component.html -->
