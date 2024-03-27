@@ -1,6 +1,6 @@
 .headerWrapper
 {
-    background-color: rgb(125, 125, 127);
+    background-color: #011631;
     overflow-x: hidden;
     font-size: 18px;
 }
@@ -13,7 +13,7 @@
 .textalignRight
 {
     text-align: right;
-    background-color: rgb(125, 125, 127);
+    background-color: #011631;
     padding-bottom: 5px;
 }
 .navButton 
