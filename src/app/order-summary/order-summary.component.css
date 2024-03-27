@@ -1,19 +1,20 @@
 h2 {
     padding-top: 25px;
-    color:#a0b3e2;
+    color:#011631;
     text-align: center; /* Center align the text */
 }
 
 .bigcontainer {
-    background: #011631;
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #93a9e1, #010e1e);
 }
 
 .container {
-    background: rgba(128, 128, 128, 0.5);
+    background: white;
     width: 30%;
     margin: 0 auto;
     padding: 20px;
@@ -23,11 +24,11 @@ h2 {
 
 .formDiv {
     width: 100%;
-    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
-    padding: 20px;
+    padding: 10px;
+    padding-top: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: #010e1e;
     margin-bottom: 30px;
     text-align: center;
 
@@ -35,14 +36,12 @@ h2 {
 
 .order-summary-title {
     text-align: center;
-    color: #a0b3e2;
+    color: #010e1e;
 }
 .formDiv h3 {
     font-weight: bold;
-    margin: 10px 0;
     text-align: center;
-    color: white;
-
+    color: #010e1e;
 }
 
 .formDiv .mb-3 {
@@ -50,11 +49,13 @@ h2 {
 }
 
 button {
+
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 button[caption="deleteTicket"],
@@ -65,7 +66,6 @@ button[caption="updateOrder"] {
 }
 
 button:hover {
-    opacity: 0.7;
     background-color: #011631; /* Hover color */
 }
 
@@ -90,6 +90,6 @@ hr {
 
 .totalOrderPrice h2 {
     margin-bottom: 0;
-    color: white;
+    color: #010e1e;
 
 }

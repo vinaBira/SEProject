@@ -1,6 +1,6 @@
 .headerWrapper
 {
-  background-color: #a0b3e2;
+  background-color: #011631;
   overflow-x: hidden;
   font-size: 18px;
 }
@@ -53,7 +53,7 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: #011631;
+    color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;

@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #93a9e1, #010e1e);
 }
 
 .bannerDiv {
@@ -21,7 +23,7 @@
 .movieDetailsDiv {
     width: 780px;
     margin-top: 20px;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -31,24 +33,24 @@
 .movieTitle {
     font-weight: bold;
     font-size: 24px;
-    color: #a0b3e2;
+    color: black;
 }
 
 .ratingField {
     font-weight: 600;
     font-size: 18px;
-    color: #a0b3e2;
+    color: black;
 }
 
 .durationField, .genereType {
     font-size: 14px;
-    color: #a0b3e2;
+    color: black;
 }
 
 .aboutHeading {
     font-weight: bold;
     font-size: 20px;
-    color: #a0b3e2;
+    color: black;
     margin: 20px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
@@ -57,7 +59,7 @@
 .castSubheading {
     font-size: 16px;
     font-weight: bold;
-    color: #a0b3e2;
+    color: black;
     margin-bottom: 5px;
 }
 
