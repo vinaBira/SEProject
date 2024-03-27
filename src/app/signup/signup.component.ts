@@ -43,7 +43,15 @@ export class SignupComponent implements OnInit {
   verifyError : any;
   // arrData: FormArray;
   // finalData1: any;
+  goToPreviousTab(): void {
+    // Find the first tab
+    const firstTab = document.querySelector('.nav-link:first-child') as HTMLElement;
 
+    // Programmatically click on the first tab
+    if (firstTab) {
+      firstTab.click();
+    }
+  }
 
   goToNextTab() {
     // Implement your logic to navigate to the next tab here

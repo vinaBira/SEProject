@@ -38,7 +38,7 @@
   <ng-template #nowPlayingResults>
     <div class="row text-center marB5">
       <div class="col-md-3 width24per" *ngFor="let movie of filteredMovies">
-        <div class="card nowShowingCards" *ngIf="movie.movieAvailability === 'CurrentlyRunning'" [routerLink]="['/viewmovieinfo', movie.movieTitle]">
+        <div class="card nowShowingCards" (click)="toggleShadowEffect($event)" *ngIf="movie.movieAvailability === 'CurrentlyRunning'" [routerLink]="['/viewmovieinfo', movie.movieTitle]">
           <div class="imgContainer">
             <img src="{{movie.posterSrc}}" class="nowShowingPoster">
           </div>
@@ -61,7 +61,7 @@
   <ng-template #upcomingResults>
     <div class="row text-center marB5">
       <div class="col-md-3 width24per" *ngFor="let movie of filteredMovies">
-        <div class="card upComingCards" *ngIf="movie.movieAvailability === 'ComingSoon'" [routerLink]="['/viewmovieinfo', movie.movieTitle]">
+        <div class="card upComingCards" (click)="toggleShadowEffect($event)" *ngIf="movie.movieAvailability === 'ComingSoon'" [routerLink]="['/viewmovieinfo', movie.movieTitle]">
           <div class="imgContainer">
             <img src="{{movie.posterSrc}}" class="upComingPoster">
           </div>

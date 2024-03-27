@@ -7,6 +7,47 @@
   background: linear-gradient(to bottom, #93a9e1, #010e1e);
 }
 
+/* Active tab */
+.nav-tabs .nav-item .nav-link.active {
+  /* Styles for the active tab */
+  color: white;
+}
+
+/* Personal Information tab */
+.nav-tabs .nav-item:nth-child(1) .nav-link {
+  /* Styles for the Personal Information tab */
+  background-color: #011631; /* Choose your desired color */
+  color: white;
+}
+
+/* Payment Information tab */
+.nav-tabs .nav-item:nth-child(2) .nav-link {
+  /* Styles for the Payment Information tab */
+  background-color: #011631; /* Choose your desired color */
+  color: white;
+}
+
+/* Confirmation tab */
+.nav-tabs .nav-item:nth-child(3) .nav-link {
+  /* Styles for the Confirmation tab */
+  background-color: #011631; /* Choose your desired color */
+  color: white;
+}
+
+/* Non-active tabs */
+.nav-tabs .nav-item:not(.active) .nav-link {
+  /* Styles for non-active tabs */
+  background-color: #ddd !important; /* Choose your desired color for non-selected tabs */
+  color: black !important; /* Choose text color for non-selected tabs */
+}
+
+Content area of active tab
+.tab-content .tab-pane.active {
+  /* Styles for the content area of active tab */
+  background-color: #82a0c7; /* Choose your desired color for content area */
+  color: black; /* Choose text color for content area */
+}
+
 .signUpMain {
   text-align: center;
 }
@@ -73,7 +114,7 @@
   opacity: 0.7; 
 }
 .signUp-container button {
-  background-color: #a0b3e2;
+  background-color: #0b3d7e;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;

@@ -29,6 +29,17 @@ export class MovieshomeComponent implements OnInit {
 
   constructor(private dataSharingService: DataSharingService, private appService: appApiServices, private cdr: ChangeDetectorRef) { }
 
+  toggleShadowEffect(event: any) {
+    const selectedCard = event.currentTarget;
+    const allCards = document.querySelectorAll('.nowShowingCards, .upComingCards');
+    
+    allCards.forEach(card => {
+      card.classList.remove('selectedMovie');
+    });
+    
+    selectedCard.classList.add('selectedMovie');
+  }
+
   ngOnInit(): void {
     this.appService.getMoviesList().subscribe(res => {
       if (res) {

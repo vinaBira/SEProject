@@ -9,7 +9,7 @@
             <!-- Tab navigation -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#personalInfoTab">Personal Information</a>
+                    <a class="nav-link active" data-toggle="tab"  href="#personalInfoTab">Personal Information</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#paymentInfoTab">Payment Information</a>
@@ -123,7 +123,9 @@
                         Please enter a valid phone number (e.g., +1234567890).
                     </div>
                 </div>
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
                 <button type="button" class="btn btn-primary" (click)="goToNextTab()">Next</button>
+                </div>
                     </form>
                 </div>
                 <div id="paymentInfoTab" class="container tab-pane fade"><br>
@@ -202,10 +204,33 @@
                                 <div *ngIf="paymentForm.get('nameOnCard')?.invalid && paymentForm.get('nameOnCard')?.touched" class="error-message">
                                     Please enter the name on the card.
                                 </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="billingAddress" class="labelTag">Billing Address</label>
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="street" class="labelTag">Street</label>
+                                    <input type="text" id="street" name="street" formControlName="street" placeholder="Billing Street">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="city" class="labelTag">City</label>
+                                    <input type="text" id="city" name="city" formControlName="city" placeholder="Billing City">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="state" class="labelTag">State</label>
+                                    <input type="text" id="state" name="state" formControlName="state" placeholder="Billing State">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="zipcode" class="labelTag">Zipcode</label>
+                                    <input type="text" id="zipcode" name="zipcode" formControlName="zipcode" placeholder="Billing Zipcode">
+                                </div>
                             </div>
             
                         </div> 
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px;">
+                        <button type="button" class="btn btn-secondary" (click)="goToPreviousTab()">Previous</button>
+        
                         <button type="button" class="btn btn-primary" (click)="goToNextTab1()">Next</button>
+                    </div> 
                     </form>
                 </div>
                 <div id="confirmationTab" class="container tab-pane fade"><br>
@@ -214,29 +239,11 @@
                         <!-- Billing Address fields -->
                         <!-- Billing Address Section -->
                 <div>
-                    <div class="form-group" [formGroup]="paymentForm">
-                        <label for="billingAddress" class="labelTag">Billing Address</label>
-                    </div>
-                    <div class="form-group" [formGroup]="paymentForm">
-                        <label for="street" class="labelTag">Street</label>
-                        <input type="text" id="street" name="street" formControlName="street" placeholder="Billing Street">
-                    </div>
-                    <div class="form-group" [formGroup]="paymentForm">
-                        <label for="city" class="labelTag">City</label>
-                        <input type="text" id="city" name="city" formControlName="city" placeholder="Billing City">
-                    </div>
-                    <div class="form-group" [formGroup]="paymentForm">
-                        <label for="state" class="labelTag">State</label>
-                        <input type="text" id="state" name="state" formControlName="state" placeholder="Billing State">
-                    </div>
-                    <div class="form-group" [formGroup]="paymentForm">
-                        <label for="zipcode" class="labelTag">Zipcode</label>
-                        <input type="text" id="zipcode" name="zipcode" formControlName="zipcode" placeholder="Billing Zipcode">
-                    </div>
+                    
                         <!-- Shipping Address fields -->
                         <!-- Shipping Address Section -->
                 <div class="form-group" [formGroup]="signupForm" >
-                    <label class="labelTag"> Address</label>
+                    <label class="labelTag"> Shipping Address</label>
                   </div>
                 <div class="form-group" [formGroup]="signupForm">
                     <label for="shippingStreet" class="labelTag">Street</label>
@@ -262,6 +269,11 @@
                     <input type="checkbox" id="promotionsSubscribed" name="promotionsSubscribed" formControlName="promotionsSubscribed">
                     <label for="promotionsSubscribed" class="labelTag">Subscribe for Promotions</label>
                 </div>
+                <div style="display: flex; justify-content: flex-start; margin-bottom: 10px;">
+                <button type="button" class="btn btn-secondary" (click)="goToNextTab()">Previous</button>
+            </div>
+            <div></div>
+            <div></div>
 
                 <button type="submit" [disabled]="!signupForm.valid" matTooltip="Ready for sign up!">Sign Up</button>
                 <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
