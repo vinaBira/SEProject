@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #011631;
+  background: linear-gradient(to bottom, #93a9e1, #010e1e);
   font-size: 18px;
 }
 
@@ -12,12 +12,13 @@
 }
 
 .login-container {
-  background-color: rgba(128, 128, 128, 0.5);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  background: #fff;
   width: 780px;
-  display: inline-block;
+  padding: 20px; 
+  border-radius: 5px; 
+  color: #fff; 
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .logoImgDiv {
@@ -28,7 +29,7 @@
 }
 
 .loginField {
-  color: #a0b3e2;
+  color: #010e1e;
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 20px;
@@ -36,12 +37,12 @@
 }
 
 .login-container .form-group {
-  text-align: left;
+  text-align: center;
 }
 
 .labelTag {
-  color: #a0b3e2;
   font-weight: 600;
+  color: #010e1e;
 }
 
 .login-container input[type="text"],

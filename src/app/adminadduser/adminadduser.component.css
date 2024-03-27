@@ -1,21 +1,18 @@
 .addUserWrapper
 {
-    width: 700px;
-    background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 40px auto; 
-    margin-top: 100px;
-    color: #a0b3e2;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
+    background: #fff;
+    width: 780px;
+    padding: 20px; 
+    border-radius: 5px; 
+    color: grey;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .welcomeMessage
 {
     height: 50px;
     /* background: radial-gradient(#4B0082, #ffffff); */
-    color: #a0b3e2;
+    color: #011631;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +48,7 @@
 }
 .addUserForm label
 {
+   color: #011631;
    font-weight: 500;
 }
 .form-check label

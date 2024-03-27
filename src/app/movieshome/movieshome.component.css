@@ -6,6 +6,10 @@
   font-size: 18px;
 }
 
+.selectedMovie {
+  box-shadow: 0px 0px 10px 0px rgba(17, 27, 108, 0.5); /* Adjust shadow properties as needed */
+}
+
 /* .background-container {
   position: relative;
   width: 100%;
@@ -40,8 +44,8 @@
 }
 
 .categoryBtn {
-  color: #FFF; 
-  background-color: #a0b3e2;
+  color: #000; 
+  background-color: #5d8dcd;
   padding: 8px 15px;
   margin-right: 5px;
   border: unset;
@@ -62,7 +66,7 @@
   width: 480px;
   padding: 6px 10px;
   border-radius: 10px;
-  color: #a0b3e2; /* Purple-black */
+  color: #011631; /* Purple-black */
   font-size: 18px;
 }
 
@@ -73,20 +77,20 @@
 }
 
 .searchText {
-  color: #a0b3e2; /* Purple-black */
+  color: #011631; /* Purple-black */
   border: unset;
   width: 90%;
   padding-left: 5px;
 }
 
 .searchText::placeholder {
-  color: #a0b3e2; /* Purple-black */
+  color: #011631; /* Purple-black */
   opacity: 1; /* Firefox */
 }
 
 .searchBtn {
   color: #FFF;
-  background-color: #a0b3e2; /* Purple-black */
+  background-color: #011631; /* Purple-black */
   padding: 5px 15px;
   text-align: center;
   border: unset;
@@ -132,15 +136,15 @@
 }
 
 .nowShowingCards {
-  border: 1px solid #a0b3e2; /* Purple-black */
+  border: 1px solid #011631; /* Purple-black */
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 1px 1px 3px 2px #c1d8e6;
-  color: #a0b3e2; /* Purple-black */
+  color: #011631; /* Purple-black */
 }
 
 .bookTicketBtn {
-  background-color: #a0b3e2; /* Purple-black */
+  background-color: #011631; /* Purple-black */
   color: #FFF;
   padding: 8px 10px;
   font-weight: 500;
@@ -190,15 +194,15 @@
 }
 
 .upComingCards {
-  border: 1px solid #a0b3e2; /* Purple-black */
+  border: 1px solid #011631; /* Purple-black */
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 1px 1px 3px 2px #c1d8e6;
-  color: #a0b3e2; /* Purple-black */
+  color: #011631; /* Purple-black */
 }
 
 .bookTicketBtn {
-  background-color: #a0b3e2; /* Purple-black */
+  background-color: #445c9a; /* Purple-black */
   color: #FFF;
   padding: 8px 10px;
   font-weight: 500;

@@ -24,7 +24,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
   }
 
   body {
-    background-color: #011631; /*changed to darker blue to make light blue "pop"*/
+    background: linear-gradient(to bottom, #93a9e1, #010e1e);
     font-family: 'Arial', sans-serif; /* Modern, readable font */
   }
   

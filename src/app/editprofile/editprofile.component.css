@@ -1,10 +1,11 @@
 .editProfile {
-  width: 800px;
-  background: rgba(128, 128, 128, 0.5);
-  opacity: 0.9;
-  border-radius: 5px;
-  margin: 30px auto;
-  color: #fff; /* Change text color to white */
+  background: #fff;
+  width: 780px;
+  padding: 20px; 
+  border-radius: 5px; 
+  color: #010e1e; 
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #exampleInputEmail1.read-only {
@@ -18,17 +19,18 @@
   color: white; /* White text */
   border: none; /* Remove border */
   padding: 10px 10px; /* Add padding */
+  margin-left: 10px;
   cursor: pointer; /* Add cursor pointer on hover */
   border-radius: 10px; /* Add rounded corners */
 }
 
 .changePasswordBtn:hover {
-  background-color: #5772b5; /* Darker blue color on hover */
+  background-color: #010e1e; /* Darker blue color on hover */
 }
 
 .welcomeMessage {
   height: 50px;
-  background: #a0b3e2;
+  background: #010e1e;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -61,7 +63,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    background-color: #A0B3E2;
+    background-color: #010e1e;
     border-radius: 10px;
 
 
@@ -195,7 +197,7 @@
   }
   .paymentBtns[disabled] {
     background-color: #ccc; 
-    color: #A0B3E2; 
+    color: #5d6068; 
     cursor: not-allowed; 
     opacity: 0.9; 
   }
@@ -267,6 +269,11 @@
     border-radius: 7px;
     margin-bottom: 15px;
 }
+
+.paymentBtns:hover {
+  background-color: #010e1e;
+}
+
 .paymentCardDiv
 {
     background: #fff;
@@ -359,5 +366,9 @@
 
   p{
     margin-bottom: 30px;
+  }
+
+  h3 {
+    color: white;
   }
   

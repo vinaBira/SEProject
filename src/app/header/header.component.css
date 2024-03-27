@@ -1,6 +1,6 @@
 .headerWrapper
 {
-    background-color: #a0b3e2;
+    background-color: #011631;
     overflow-x: hidden;
     font-size: 18px;
 }
@@ -13,16 +13,16 @@
 .textalignRight
 {
     text-align: right;
-    background-color: #a0b3e2;
+    background-color: #011631;
     padding-bottom: 5px;
 }
 .navButton 
 {
-    background-color: #fff;
+    background-color: white;
     color: #011631;
     margin-right: 10px;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 0px;
     padding: 8px 15px;
     margin-top: 5px;
 }
