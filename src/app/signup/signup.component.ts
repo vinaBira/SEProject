@@ -25,6 +25,7 @@ function passwordMatchValidator(control: AbstractControl): { [key: string]: bool
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  selectedAddressOption: string =''; 
   logoImg = '../assets/img/Logo-SE.jpeg';
   signupForm: FormGroup;
   paymentForm: FormGroup;
@@ -41,6 +42,13 @@ export class SignupComponent implements OnInit {
   registerAccountError : any;
   verificationCustomerData: any;
   verifyError : any;
+  
+  onAddressOptionChange() {
+    // If 'new' option is selected, reset form controls
+    if (this.selectedAddressOption === 'new') {
+      this.signupForm.reset(); // Reset the form to clear existing values
+    }
+  }
   // arrData: FormArray;
   // finalData1: any;
   goToPreviousTab(): void {
@@ -71,8 +79,10 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  constructor(private router: Router, private fb: FormBuilder, private http: HttpClient, private appService: appApiServices) {
-
+  constructor(private router: Router, private fb: FormBuilder, private http: HttpClient, private appService: appApiServices, private formBuilder: FormBuilder) {
+    this.signupForm = this.formBuilder.group({
+      // Define your form controls here
+    });
     // const cardDetailsArray = this.fb.array([]);
 
     this.paymentForm = this.fb.group({
