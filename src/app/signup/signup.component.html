@@ -123,6 +123,7 @@
                         Please enter a valid phone number (e.g., +1234567890).
                     </div>
                 </div>
+                <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
                 <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
                 <button type="button" class="btn btn-primary" (click)="goToNextTab()">Next</button>
                 </div>
@@ -204,7 +205,10 @@
                                 <div *ngIf="paymentForm.get('nameOnCard')?.invalid && paymentForm.get('nameOnCard')?.touched" class="error-message">
                                     Please enter the name on the card.
                                 </div>
+                                
+                                
                                 <div class="form-group" [formGroup]="paymentForm">
+                                    
                                     <label for="billingAddress" class="labelTag">Billing Address</label>
                                 </div>
                                 <div class="form-group" [formGroup]="paymentForm">
@@ -226,7 +230,9 @@
                             </div>
             
                         </div> 
+                        <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
                         <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px;">
+                            
                         <button type="button" class="btn btn-secondary" (click)="goToPreviousTab()">Previous</button>
         
                         <button type="button" class="btn btn-primary" (click)="goToNextTab1()">Next</button>

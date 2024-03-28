@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="signUpWrapper" [class.loading]="loading">
     <div class="signUpMain">
         <div class="signUp-container">
@@ -6,8 +5,30 @@
                 <img src="{{logoImg}}" class="logoImgDiv">
             </div>
             <p class="signUpField">Sign Up</p>
-            <form  (ngSubmit)="signup()" class="signUpForm">
-                <!-- Email -->
+
+            <!-- Tab navigation -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab"  href="#personalInfoTab">Personal Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#paymentInfoTab">Payment Information</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#addressInfoTab">Address Information</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#confirmationTab">Confirmation</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="personalInfoTab" class="container tab-pane active"><br>
+                    <!-- Personal Information form -->
+                    <form (ngSubmit)="signup()" class="signUpForm">
+                        <!-- Email, First Name, Last Name, Password, Confirm Password, Phone fields -->
+                        <!-- Email -->
                 <div class="form-group" [formGroup]="signupForm">
                     <label for="email" class="labelTag">Email (Username) <sup class="supClass">*</sup></label>
                     <input
@@ -102,109 +123,133 @@
                         Please enter a valid phone number (e.g., +1234567890).
                     </div>
                 </div>
-
-                <div>
-                <!-- Card Number -->
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="cardNumber" class="labelTag">Card Number</label>
-                    <input
-                        type="text"
-                        id="cardNumber"
-                        name="cardNumber"
-                        formControlName="cardNumber"
-                        placeholder="Enter your card number"
-                    >
-                    <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="error-message">
-                        Please enter a valid 16-digit card number.
-                    </div>
+                <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
+                <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+                <button type="button" class="btn btn-primary" (click)="goToNextTab()">Next</button>
                 </div>
-                <!-- Card Type -->
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="cardType" class="labelTag">Card Type</label>
-                    <select class="form-control" id="cardType" name="cardType" formControlName="cardType">
-                      <option value="Credit">Credit</option>
-                      <option value="Debit">Debit</option>
-                    </select>
-                    <div *ngIf="paymentForm.get('cardType')?.invalid && paymentForm.get('cardType')?.touched" class="error-message">
-                      Please select the type of the card.
-                    </div>
-                  </div>
-                  
-
-
-                <!-- CVV -->
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="securityNumber" class="labelTag">CVV</label>
-                    <input
-                        type="password"
-                        id="securityNumber"
-                        name="securityNumber"
-                        formControlName="securityNumber"
-                        placeholder="Enter CVV"
-                    >
-                    <div *ngIf="paymentForm.get('securityNumber')?.invalid && paymentForm.get('securityNumber')?.touched" class="error-message">
-                        Please enter a valid 3-digit CVV.
-                    </div>
+                    </form>
                 </div>
-                <!-- Card Expiry -->
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="expiryDate" class="labelTag">Expiry Date of Card</label>
-                    <input
-                        type="text"
-                        id="expiryDate"
-                        name="expiryDate"
-                        formControlName="expiryDate"
-                        placeholder="Enter Expiry Date in MM/YY format"
-                        pattern="^(0[1-9]|1[0-2])\/[0-9]{2}$"
-                    >
-                    <div *ngIf="paymentForm.get('expiryDate')?.invalid && paymentForm.get('expiryDate')?.touched" class="error-message">
-                        Please enter the expiry date of the card in MM/YY format.
-                    </div>
-                </div>
-
-                <!-- Card Name -->
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="nameOnCard" class="labelTag">Name on the Card</label>
-                    <input
-                        type="text"
-                        id="nameOnCard"
-                        name="nameOnCard"
-                        formControlName="nameOnCard"
-                        placeholder="Enter the name on the card"
-                    >
-                    <div *ngIf="paymentForm.get('nameOnCard')?.invalid && paymentForm.get('nameOnCard')?.touched" class="error-message">
-                        Please enter the name on the card.
-                    </div>
-                </div>
-
-            </div>     
+                <div id="paymentInfoTab" class="container tab-pane fade"><br>
+                    <!-- Payment Information form -->
+                    <form (ngSubmit)="signup()" class="signUpForm">
+                        <!-- Card Number, Card Type, CVV, Card Expiry, Card Name fields -->
+                        <div>
+                            <!-- Card Number -->
+                            <div class="form-group" [formGroup]="paymentForm">
+                                <label for="cardNumber" class="labelTag">Card Number</label>
+                                <input
+                                    type="text"
+                                    id="cardNumber"
+                                    name="cardNumber"
+                                    formControlName="cardNumber"
+                                    placeholder="Enter your card number"
+                                >
+                                <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="error-message">
+                                    Please enter a valid 16-digit card number.
+                                </div>
+                            </div>
+                            <!-- Card Type -->
+                            <div class="form-group" [formGroup]="paymentForm">
+                                <label for="cardType" class="labelTag">Card Type</label>
+                                <select class="form-control" id="cardType" name="cardType" formControlName="cardType">
+                                  <option value="Credit">Credit</option>
+                                  <option value="Debit">Debit</option>
+                                </select>
+                                <div *ngIf="paymentForm.get('cardType')?.invalid && paymentForm.get('cardType')?.touched" class="error-message">
+                                  Please select the type of the card.
+                                </div>
+                              </div>
+                              
             
             
-                <!-- Billing Address Section -->
+                            <!-- CVV -->
+                            <div class="form-group" [formGroup]="paymentForm">
+                                <label for="securityNumber" class="labelTag">CVV</label>
+                                <input
+                                    type="password"
+                                    id="securityNumber"
+                                    name="securityNumber"
+                                    formControlName="securityNumber"
+                                    placeholder="Enter CVV"
+                                >
+                                <div *ngIf="paymentForm.get('securityNumber')?.invalid && paymentForm.get('securityNumber')?.touched" class="error-message">
+                                    Please enter a valid 3-digit CVV.
+                                </div>
+                            </div>
+                            <!-- Card Expiry -->
+                            <div class="form-group" [formGroup]="paymentForm">
+                                <label for="expiryDate" class="labelTag">Expiry Date of Card</label>
+                                <input
+                                    type="text"
+                                    id="expiryDate"
+                                    name="expiryDate"
+                                    formControlName="expiryDate"
+                                    placeholder="Enter Expiry Date in MM/YY format"
+                                    pattern="^(0[1-9]|1[0-2])\/[0-9]{2}$"
+                                >
+                                <div *ngIf="paymentForm.get('expiryDate')?.invalid && paymentForm.get('expiryDate')?.touched" class="error-message">
+                                    Please enter the expiry date of the card in MM/YY format.
+                                </div>
+                            </div>
+            
+                            <!-- Card Name -->
+                            <div class="form-group" [formGroup]="paymentForm">
+                                <label for="nameOnCard" class="labelTag">Name on the Card</label>
+                                <input
+                                    type="text"
+                                    id="nameOnCard"
+                                    name="nameOnCard"
+                                    formControlName="nameOnCard"
+                                    placeholder="Enter the name on the card"
+                                >
+                                <div *ngIf="paymentForm.get('nameOnCard')?.invalid && paymentForm.get('nameOnCard')?.touched" class="error-message">
+                                    Please enter the name on the card.
+                                </div>
+                                
+                                
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    
+                                    <label for="billingAddress" class="labelTag">Billing Address</label>
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="street" class="labelTag">Street</label>
+                                    <input type="text" id="street" name="street" formControlName="street" placeholder="Billing Street">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="city" class="labelTag">City</label>
+                                    <input type="text" id="city" name="city" formControlName="city" placeholder="Billing City">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="state" class="labelTag">State</label>
+                                    <input type="text" id="state" name="state" formControlName="state" placeholder="Billing State">
+                                </div>
+                                <div class="form-group" [formGroup]="paymentForm">
+                                    <label for="zipcode" class="labelTag">Zipcode</label>
+                                    <input type="text" id="zipcode" name="zipcode" formControlName="zipcode" placeholder="Billing Zipcode">
+                                </div>
+                            </div>
+            
+                        </div> 
+                        <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px;">
+                            
+                        <button type="button" class="btn btn-secondary" (click)="goToPreviousTab()">Previous</button>
+        
+                        <button type="button" class="btn btn-primary" (click)="goToNextTab1()">Next</button>
+                    </div> 
+                    </form>
+                </div>
+                <div id="confirmationTab" class="container tab-pane fade"><br>
+                    <!-- Address Information form -->
+                    <form (ngSubmit)="signup()" class="signUpForm">
+                        <!-- Billing Address fields -->
+                        <!-- Billing Address Section -->
                 <div>
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="billingAddress" class="labelTag">Billing Address</label>
-                </div>
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="street" class="labelTag">Street</label>
-                    <input type="text" id="street" name="street" formControlName="street" placeholder="Billing Street">
-                </div>
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="city" class="labelTag">City</label>
-                    <input type="text" id="city" name="city" formControlName="city" placeholder="Billing City">
-                </div>
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="state" class="labelTag">State</label>
-                    <input type="text" id="state" name="state" formControlName="state" placeholder="Billing State">
-                </div>
-                <div class="form-group" [formGroup]="paymentForm">
-                    <label for="zipcode" class="labelTag">Zipcode</label>
-                    <input type="text" id="zipcode" name="zipcode" formControlName="zipcode" placeholder="Billing Zipcode">
-                </div>
-
-                <!-- Shipping Address Section -->
+                    
+                        <!-- Shipping Address fields -->
+                        <!-- Shipping Address Section -->
                 <div class="form-group" [formGroup]="signupForm" >
-                    <label class="labelTag"> Address</label>
+                    <label class="labelTag"> Shipping Address</label>
                   </div>
                 <div class="form-group" [formGroup]="signupForm">
                     <label for="shippingStreet" class="labelTag">Street</label>
@@ -224,16 +269,27 @@
                 </div>
 
                </div>
-                <!-- Subscribe Promotions -->
+
+                        <!-- Subscribe Promotions -->
                 <div class="form-group subscribeDiv" [formGroup]="signupForm">
                     <input type="checkbox" id="promotionsSubscribed" name="promotionsSubscribed" formControlName="promotionsSubscribed">
                     <label for="promotionsSubscribed" class="labelTag">Subscribe for Promotions</label>
                 </div>
+                <div style="display: flex; justify-content: flex-start; margin-bottom: 10px;">
+                <button type="button" class="btn btn-secondary" (click)="goToNextTab()">Previous</button>
+            </div>
+            <div></div>
+            <div></div>
 
                 <button type="submit" [disabled]="!signupForm.valid" matTooltip="Ready for sign up!">Sign Up</button>
                 <a routerLink="/login" class="alreadyAccount"> Already have an Accoount? Login!</a>
-            </form>
+                    </form>
+                </div>
 
+            </div>
+
+            <!-- Confirmation Modal for Success and Error -->
+            <!-- Your existing confirmation modals -->
             <!-- Confirmation Modal for Success -->
             <div *ngIf="isAccountCreationSuccessful" class="confirmation-modal">
                 <div class="confirmation-content">
@@ -287,8 +343,8 @@
                     </p> -->
                 </div>
             </div>
+            <!-- Loader -->
             <div class="loader" *ngIf="loading"></div>
-        </div>     
+        </div>
     </div>
 </div>
-<app-footer></app-footer>

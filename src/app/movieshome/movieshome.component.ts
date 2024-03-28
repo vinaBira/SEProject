@@ -112,6 +112,7 @@ export class MovieshomeComponent implements OnInit {
 
     this.showFilterDropdown = false;
   }
+  
 
   getNowShowingMoviesFiltered(): any[] {
     return this.movieList.filter((movie: any) => {
