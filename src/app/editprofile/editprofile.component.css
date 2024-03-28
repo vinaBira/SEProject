@@ -1,378 +1,121 @@
-.editProfSection {
-  background: linear-gradient(to bottom, #93a9e1, #010e1e);
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.editProfile {
-  background: #fff;
-  width: 780px;
-  padding: 20px; 
-  border-radius: 5px; 
-  color: #010e1e; 
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-#exampleInputEmail1.read-only {
-  color: #6c757d; /* Gray color */
-  background-color: #f8f9fa; /* Light gray background */
-  cursor: not-allowed; /* Change cursor to not-allowed */
-}
-
-.changePasswordBtn {
-  background-color: #A0B3E2; /* Blue color */
-  color: white; /* White text */
-  border: none; /* Remove border */
-  padding: 10px 10px; /* Add padding */
-  margin-left: 10px;
-  cursor: pointer; /* Add cursor pointer on hover */
-  border-radius: 10px; /* Add rounded corners */
-}
-
-.changePasswordBtn:hover {
-  background-color: #010e1e; /* Darker blue color on hover */
-}
-
-.welcomeMessage {
-  height: 50px;
-  background: #A0B3E2;
+body {
   display: flex;
-  justify-content: center;
-  border-radius: 5px;
-
-  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background: #f4f7f6;
 }
 
-.welcomeMessage h2 {
-  margin-bottom: 0;
-  color: #fff; /* Change text color to white */
-  font-size: 30px;
+/* Content styling */
+.editProfile {
+  display: flex;
+  flex: 1; /* Take up all available space */
+  padding: 20px; /* Adjust padding as needed */
+  overflow: auto; /* Enable scrolling if content is bigger than screen */
 }
 
-.formDiv
-{
-    
-    width: 60%;
-    margin: auto;
-    margin-top: 20px;
+.vertical-tab-menu {
+  flex: 0 0 200px; /* Don't grow, don't shrink, stay at 200px width */
+  background: #2c3e50;
+  padding-top: 20px;
+  height: 100%;
 }
 
-.formDiv label
-{
-   font-weight: 500;
-}
-
-.formDiv h3
-{
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: #A0B3E2;
-    border-radius: 10px;
-
-
-}
-.formDiv .mb-3
-{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.saveBtn
-{
-    color: #FFF;
-    background-color: #A0B3E2;
-    padding: 10px 15px;
-    text-align: center;
-    border: unset;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    display: inline-block;
-}
-
-.saveBtn:hover {
-  background-color: #011631; /* Change the background color on hover */
-}
-.confirmation-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .confirmation-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    height: 180px;
-    display: flex;
-  }
-  
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 35px;
-    cursor: pointer;
-  }
-  
-  .confirmation-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
-    margin-bottom: 10px;
-  }
-  
-  .confirmation-text-2 {
-    font-size: 16px;
-  }
-  /* Style for disabled buttons with a specific class */
-  .login-container button:disabled {
-    background-color: #ccc; /* Change the background color */
-    color: #000; /* Change the text color */
-    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
-  }
-  /* Style for error content */
-.error-content {
-    background-color: #fff;
-    position: relative;
-    border-radius: 5px;
-    padding: 20px;
-    color: red;
-    text-align: center;
-    width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Style for error modal */
-  .error-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Ensure it's above other elements */
-  }
-  
-  /* Style for error modal container */
-  .error-modal-container {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    position: relative; /* Relative positioning for close button */
-  }
-  
-  /* Style for close button in error modal */
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #999;
-  }
-  .modalText
-  {
-    color: #A0B3E2;
-    margin:auto;
-  }
-  .cardDetails {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #ccc;
-    padding: 20px;
-    z-index: 1;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  .paymentBtns[disabled] {
-    background-color: #ccc; 
-    color: #5d6068; 
-    cursor: not-allowed; 
-    opacity: 0.9; 
-  }
-
-.cardDetailsContent , .passwordChangeContent
-{
-    color: #A0B3E2; 
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 60%;
-    position: relative;
-    margin: auto;
-}
-.btnsPayment
-{
-    display: flex;
-    justify-content: end;
-    
-
-}
-.paymentBillingDetails
-{
-    display: flex;
-    justify-content: space-between;
-}
-.cardDetailsOnly
-{
-    width: 40%;
-}
-.billingAddressDetails
-{
-    width: 45%;
-}
-.noCardsExist
-{
-  padding: 15px;
+/* Tab and content styling */
+.vertical-tab-menu button {
+  padding: 10px;
+  border: none;
+  background: none;
+  color: white;
+  text-align: left;
+  transition: background-color 0.3s;
   width: 100%;
-  background: #FFF;
-  color: #A0B3E2;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.pad-0
-{
-    padding: 0;
-}
-.cardDetailsContent h2
-{
-    border-bottom: 1px solid #A0B3E2;
-    font-weight: 800;
-    margin: 5px;
-    /* padding: 5px; */
-}
-.paymentBillingDetails h4
-{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.paymentBtns
-{
-    color: #FFF;
-    background-color: #A0B3E2;
-    padding: 5px 10px;
-    text-align: center;
-    border: unset;
-    margin-left: 15px;
-    border-radius: 7px;
-    margin-bottom: 15px;
+  border-bottom: 1px solid #3a506b;
 }
 
-.paymentBtns:hover {
-  background-color: #010e1e;
+.vertical-tab-menu button:hover,
+.vertical-tab-menu button.active {
+  background-color: #3a506b;
 }
 
-.paymentCardDiv
-{
-    background: #fff;
-    padding: 10px 10px 0px 10px;
-    border-radius: 5px;
-    height: 80px;
+.vertical-tab-content {
+  flex: 1; /* Take up all available space */
+  background: white;
+  padding: 20px;
+  overflow: hidden;
 }
-.flexBtns
-{
-    display: flex;
-    justify-content: end;
+
+/* Adjust the formDiv */
+.formDiv {
+  background: #ecf0f1;
+  margin: 0;
+  border-radius: 4px;
+  width: 100%; /* Make sure form takes the whole width */
+  max-width: 100%; /* Limit the width on larger screens */
+  box-shadow: none; /* Remove if you don't need the shadow */
+  border: none; /* Remove if you don't need the border */
 }
-.marL0
-{
-    margin-left: 0px;
+
+.formDiv h3 {
+  margin-bottom: 15px;
 }
-.input-group-text .edit-icon {
-    cursor: pointer;
-    color: #007bff; /* Change the color as needed */
-    font-size: 20px; /* Adjust the font size as needed */
-    margin-left: 5px; /* Add spacing between the input and the icon */
+
+.formDiv input, .formDiv select, .formDiv button {
+  width: calc(100% - 20px);
+  margin: 5px 0;
+}
+
+/* Footer */
+app-footer {
+  padding: 10px;
+  background: #34495e;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .editProfile {
+    flex-direction: column;
   }
-  
-  .form-control[readonly] {
-    background-color: #f7f7f7; /* Change the background color for read-only input */
-  }
-  .posRel
-  {
-    position: relative;
+
+  .vertical-tab-menu {
     width: 100%;
-  }
-.edit-icon
-{
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    z-index: 2;
-    top: 5px;
-    transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1); 
-}  
-.password-change-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #ccc;
-    padding: 20px;
-    z-index: 1;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .password-change-popup h2 {
-    margin-top: 0;
-  }
-  
-  .password-change-popup button {
-    margin-top: 10px;
-  }
-  .error-message {
-    color: #ff0000;
-    font-size: 14px;
-    margin-top: 5px;
-    font-weight: bold;
-  }
-  .error-content {
-    background-color: #fff;
-    position: relative;
-    border-radius: 5px;
-    padding: 20px;
-    color: red;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  .supClass
-  {
-    color: #f62e2e;
-    font-size: 90%;
-    top: -0.3em;
-  }
-  .success-message {
-    color: green; /* Text color for success message */
-    font-weight: bold; /* Make the text bold */
-    margin-top: 10px; /* Add some top margin for spacing */
+    order: -1; /* Bring tabs to the top on small screens */
   }
 
-  p{
-    margin-bottom: 30px;
+  .vertical-tab-menu button {
+    border-bottom: none;
   }
 
-  h3 {
-    color: white;
+  .vertical-tab-content {
+    padding: 15px;
   }
-  
+}
+
+/* Make sure footer stays at the bottom */
+body > * {
+  flex-shrink: 0;
+}
+
+/* Content should expand to fill available space */
+.editProfSection, .editProfile, .vertical-tab-content {
+  flex-grow: 1;
+}
+
+/* Remove fixed positioning from the footer */
+app-footer {
+  position: relative;
+}

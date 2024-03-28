@@ -32,6 +32,7 @@ export class AdminaddpromotionComponent implements OnInit {
   addNewPromotion()
   {
     const finalFormData = this.addPromoForm.value;
+    console.log("Form Data:", finalFormData); // Log the form data to check if it's captured properly
     this.loading = true;
     this.appService.addNewPromotion(finalFormData).subscribe(
       (response: any) => {

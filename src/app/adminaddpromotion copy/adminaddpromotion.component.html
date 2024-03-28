@@ -4,55 +4,55 @@
         <h2>Welcome, Admin!</h2>
   
         <!-- Add Promotion Form -->
-        <form (ngSubmit)="addNewPromotion()" class="addUserForm">
+        <form (ngSubmit)="addNewPromotion()" [formGroup]="addPromoForm" class="addUserForm">
             <!-- Promotion Code -->
-            <div class="form-group" [formGroup]="addPromoForm">
+            <div class="form-group">
                 <label for="promoCode" class="labelTag">Promotion Code</label>
                 <input class="form-element"
                     type="text"
                     id="promoCode"
-                    name="promoCode"
+                    formControlName="promoCode"
                     placeholder="Add Promotion Code"
                     required >
             </div>
             <!-- Promotion description -->
-            <div class="form-group" [formGroup]="addPromoForm">
+            <div class="form-group">
                 <label for="promoDescription" class="labelTag">Promotion Description</label>
                 <input class="form-element"
                     type="text"
                     id="promoDescription"
-                    name="promoDescription"
+                    formControlName="promoDescription"
                     placeholder="Enter a Description"
                     required >
             </div>
   
             <!-- Availability Start Date -->
-            <div class="form-group" [formGroup]="addPromoForm">
+            <div class="form-group">
                 <label for="startDate" class="labelTag">Starts From</label>
                 <input class="form-element"
                     type="date"
                     id="startDate"
-                    name="startDate"
+                    formControlName="startDate"
                     placeholder="Promotion Start Date"
                     required>
             </div>
             <!-- Availability End Date -->
-            <div class="form-group" [formGroup]="addPromoForm">
+            <div class="form-group">
                 <label for="endDate" class="labelTag">Ends on</label>
                 <input class="form-element"
                     type="date"
                     id="endDate"
-                    name="endDate"
+                    formControlName="endDate"
                     placeholder="Promotion End Date"
                     required>
             </div>
             <!-- Discount Applied -->
-            <div class="form-group" [formGroup]="addPromoForm">
+            <div class="form-group" >
                 <label for="discountApplied" class="labelTag">Discount Applied</label>
                 <input class="form-element"
                     type="number"
                     id="discountApplied"
-                    name="discountApplied"
+                    formControlName="discountApplied"
                     placeholder="Discount"
                     required>
             </div>
