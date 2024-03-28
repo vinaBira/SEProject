@@ -31,6 +31,7 @@ export class EditprofileComponent implements OnInit {
   successMessage: any;
   errorMessage: any;
   addCardError : any;
+  selectedTab = 'personalInfo';
 
   constructor(private http: HttpClient, private router: Router, private fb: FormBuilder) { 
  
@@ -56,6 +57,10 @@ export class EditprofileComponent implements OnInit {
 
   navigateToForgotPassword() {
     this.router.navigate(['/forgot-password']);
+  }
+
+  selectTab(tab: string): void {
+    this.selectedTab = tab;
   }
 
   ngOnInit(): void {
