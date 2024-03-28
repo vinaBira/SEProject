@@ -56,15 +56,16 @@ body {
   overflow: hidden;
 }
 
-/* Adjust the formDiv */
 .formDiv {
   background: #ecf0f1;
   margin: 0;
   border-radius: 4px;
-  width: 100%; /* Make sure form takes the whole width */
-  max-width: 100%; /* Limit the width on larger screens */
-  box-shadow: none; /* Remove if you don't need the shadow */
-  border: none; /* Remove if you don't need the border */
+  width: 100%; 
+  max-width: 100%; 
+  box-shadow: none; 
+  border: none; 
+  max-height: 605px; 
+  overflow-y: auto; 
 }
 
 .formDiv h3 {

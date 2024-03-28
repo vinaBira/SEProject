@@ -194,17 +194,7 @@
                   name="state"
                 />
               </div>
-              <div class="mb-3">
-                <label for="zipcode" class="form-label">Zip Code</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="zipcode"
-                  [(ngModel)]="customerData.zipcode"
-                  name="zipCode"
-                />
-              </div>
-              <div class="mb-3 form-check">
+              <div class="checkbox-wrapper">
                 <input
                   type="checkbox"
                   class="form-check-input"
@@ -212,12 +202,7 @@
                   [(ngModel)]="customerData.promotionsSubscribed"
                   name="promotions"
                 />
-                <label
-                  class="form-check-label"
-                  for="exampleCheck1"
-                  style="margin-left: 5px"
-                  >Turn on Promotions</label
-                >
+                <label for="exampleCheck1" class="form-check-label">Turn on Promotions</label>
               </div>
               <button
                 type="submit"
@@ -413,4 +398,4 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>
+<app-admin-footer></app-admin-footer>
