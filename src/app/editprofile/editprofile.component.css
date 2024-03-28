@@ -34,7 +34,7 @@ body {
 
 /* Tab and content styling */
 .vertical-tab-menu button {
-  padding: 10px;
+  padding: 15px;
   border: none;
   background: none;
   color: white;
@@ -56,6 +56,27 @@ body {
   overflow: hidden;
 }
 
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-container .form-check-label {
+  text-align: left;
+}
+
+.checkbox-container .form-check-input {
+  margin-right: 15px; /* Adjust this value to add space */
+}
+
+
+.form-check-input {
+  margin-right: 15px;
+  align-items: left;
+
+}
+
 .formDiv {
   background: #ecf0f1;
   margin: 0;
@@ -72,14 +93,14 @@ body {
   margin-bottom: 15px;
 }
 
-.formDiv input, .formDiv select, .formDiv button {
+.formDiv select, .formDiv button {
   width: calc(100% - 20px);
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 /* Footer */
 app-footer {
-  padding: 10px;
+  padding: 15px;
   background: #34495e;
   color: white;
   text-align: center;
