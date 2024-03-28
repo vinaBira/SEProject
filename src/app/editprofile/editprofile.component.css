@@ -1,3 +1,7 @@
+.editProfSection {
+  background: linear-gradient(to bottom, #93a9e1, #010e1e);
+}
+
 .editProfile {
   background: #fff;
   width: 780px;
@@ -30,7 +34,7 @@
 
 .welcomeMessage {
   height: 50px;
-  background: #010e1e;
+  background: #A0B3E2;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -63,7 +67,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    background-color: #010e1e;
+    background-color: #A0B3E2;
     border-radius: 10px;
 
 
