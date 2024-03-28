@@ -24,17 +24,18 @@
             <form class="formDiv" (ngSubmit)="updateUser()" method="post">
               <h3>Account Details</h3>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Email address</label
-                >
-                <p
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input
+                  type="email"
                   class="form-control read-only"
                   id="exampleInputEmail1"
-                  style="color: #6c757d"
-                >
-                  {{ customerData.email }}
-                </p>
+                  [(ngModel)]="customerData.email"
+                  name="email"
+                  style="cursor: not-allowed;"
+                  disabled
+                />
               </div>
+              
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label"
                   >Password :</label
