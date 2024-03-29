@@ -15,70 +15,139 @@ body {
   flex-direction: column;
   font-family: 'Arial', sans-serif;
   background: #f4f7f6;
+  justify-content: center;
+  height: 100vh; /* Make sure the body takes at least the full viewport height */
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 /* Content styling */
 .editProfile {
   display: flex;
-  flex: 1; /* Take up all available space */
-  padding: 20px; /* Adjust padding as needed */
-  overflow: auto; /* Enable scrolling if content is bigger than screen */
+  justify-content: center; /* Center children horizontally */
+  align-items: flex-start; /* Align children to the top */
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 20px  80px 40px 80px;
 }
 
+
 .vertical-tab-menu {
-  flex: 0 0 200px; /* Don't grow, don't shrink, stay at 200px width */
+  margin-left: 10rem;
+  /* margin-right: 20px; */
+  display: flex;
+  flex-direction: column;
+  padding:20vh 0;
+  gap:2rem;
+  /* flex: 0 0 200px; Don't grow, don't shrink, stay at 200px width */
   background: #2c3e50;
-  padding-top: 20px;
-  height: 100%;
+  /* padding-top: 20px; */
+  height: 100vh;
+  width: 200px;
 }
 
 /* Tab and content styling */
 .vertical-tab-menu button {
-  padding: 10px;
+  margin: 0.5rem;
+  padding: 15px;
   border: none;
-  background: none;
-  color: white;
+  background: #b7c7d9;
+  color: rgb(0, 0, 0);
   text-align: left;
   transition: background-color 0.3s;
-  width: 100%;
-  border-bottom: 1px solid #3a506b;
+  border: 1px solid #3a506b;
+  font-weight:bold ;
+  font-size: large;
+}
+
+.vertical-tab-content button {
+  text-align: center;
+  display: block;
+  margin: 0 auto 1em auto; /* Adds a margin at the bottom */
+  background: #b7c7d9;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 1.2em; /* Larger font size */
+  border: 1px solid #3a506b;
+  padding: 1em 1.5em; /* Larger padding for bigger button size */
+  min-width: 150px; /* Minimum width */
+  cursor: pointer; /* Indicates that the element is clickable */
+  border-radius: 4px; /* Rounded corners */
+}
+
+
+@media(max-width : 768px){
+  .editProfile{
+    flex-direction: column; /* Stack sidebar and form on smaller screens */
+    align-items: center; 
+  }
+
+  .vertical-tab-content
+  .vertical-tab-menu{
+    width: 100%;
+  }
 }
 
 .vertical-tab-menu button:hover,
 .vertical-tab-menu button.active {
-  background-color: #3a506b;
+  background-color: #15d21c;
 }
 
 .vertical-tab-content {
   flex: 1; /* Take up all available space */
   background: white;
-  padding: 20px;
+  /* padding: 20px; */
   overflow: hidden;
 }
 
-/* Adjust the formDiv */
+.password-change-popup button{
+  display: inline;
+  margin: 20px;
+  justify-content: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-container .form-check-label {
+  text-align: left;
+}
+
+.checkbox-container .form-check-input {
+  margin-right: 15px; /* Adjust this value to add space */
+}
+
+
+.form-check-input {
+  margin-right: 15px;
+  align-items: left;
+
+}
+
 .formDiv {
   background: #ecf0f1;
+  padding: 2rem;
   margin: 0;
   border-radius: 4px;
-  width: 100%; /* Make sure form takes the whole width */
-  max-width: 100%; /* Limit the width on larger screens */
-  box-shadow: none; /* Remove if you don't need the shadow */
-  border: none; /* Remove if you don't need the border */
+  width: 100%;
+  height: 100vh; 
+ 
 }
 
-.formDiv h3 {
-  margin-bottom: 15px;
-}
 
-.formDiv input, .formDiv select, .formDiv button {
+
+/* .formDiv select, .formDiv button {
   width: calc(100% - 20px);
-  margin: 5px 0;
-}
+  margin: 15px 0;
+} */
 
 /* Footer */
 app-footer {
-  padding: 10px;
+  padding: 15px;
   background: #34495e;
   color: white;
   text-align: center;
@@ -100,9 +169,9 @@ app-footer {
     border-bottom: none;
   }
 
-  .vertical-tab-content {
+  /* .vertical-tab-content {
     padding: 15px;
-  }
+  } */
 }
 
 /* Make sure footer stays at the bottom */
@@ -118,4 +187,150 @@ body > * {
 /* Remove fixed positioning from the footer */
 app-footer {
   position: relative;
+}
+
+
+/* Payment Section Styling */
+.paymentMain {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.noCardsExist {
+  font-style: italic;
+  color: #666;
+  padding: 20px;
+}
+
+.paymentCardDiv {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.pad-0 {
+  padding: 0;
+}
+
+.flexBtns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.paymentBtns {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.paymentBtns:hover,
+.paymentBtns:focus {
+  background-color: #2980b9;
+}
+
+.paymentBtns:disabled {
+  background-color: #ccc;
+}
+
+.cardDetails {
+  display: none;
+  margin-top: 20px;
+}
+
+.cardDetails.active {
+  display: block;
+}
+
+.cardDetailsContent {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.paymentBillingDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cardDetailsOnly,
+.billingAddressDetails {
+  flex: 1;
+}
+
+h2, h3, h4 {
+  color: #040404;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.labelTag,
+.form-label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #0a0909;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #4f6377;
+  border-radius: .50rem;
+  margin-bottom: 1rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: .875em;
+  margin-top: .25rem;
+}
+
+.btnsPayment {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.marL0 {
+  margin-left: 0;
+}
+
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
+  .paymentBillingDetails {
+    flex-direction: column;
+  }
+}
+
+.vertical-tab-content h1 h2 h3{
+  font-weight: bold;
 }
