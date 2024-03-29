@@ -13,7 +13,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Arial', sans-serif;
   background: #f4f7f6;
   justify-content: center;
   height: 100vh; /* Make sure the body takes at least the full viewport height */
@@ -278,7 +277,6 @@ app-footer {
 
 h2, h3, h4 {
   color: #040404;
-  font-family: 'Times New Roman', Times, serif;
   font-size: x-large;
   font-weight: 700;
 }
@@ -288,7 +286,6 @@ h2, h3, h4 {
   display: block;
   margin-bottom: .5rem;
   color: #0a0909;
-  font-family: 'Times New Roman', Times, serif;
   font-size: large;
 }
 
@@ -305,7 +302,6 @@ h2, h3, h4 {
   border-radius: .50rem;
   margin-bottom: 1rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  font-family: 'Times New Roman', Times, serif;
   font-size: large;
   font-weight: bold;
 }
@@ -342,6 +338,11 @@ h2, h3, h4 {
 
 .vertical-tab-content h1 h2 h3{
   font-weight: bold;
+}
+
+#paymentHeading {
+  text-align: center;
+  margin-top: 40px;
 }
 
 
