@@ -37,13 +37,11 @@
                   disabled
                 />
               </div>
-
-              <div class="mb-3">
+              <!--<div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label"
                   >Password :</label
                 >
-                <!-- <button type="button" (click)="navigateToForgotPassword()" class="changePasswordBtn">Change Password?</button> -->
-                <!-- <a routerLink="/forgot-password" class="forgotPassword"> Change Password?</a> -->
+
                 <input
                   type="password"
                   class="form-control"
@@ -52,9 +50,20 @@
                   name="password"
                   [readonly]="!isEditingPassword"
                   (click)="openPasswordChangePopup()"
+
                 />
-                <!-- <i class="fa fa-pencil"></i>  -->
+              
+              -->
+
+              <div class="mb-3">
+                <button id="password-change-button" type="button" (click)="openPasswordChangePopup()">Change Password</button>
               </div>
+            
+              
+                <!-- <button type="button" (click)="navigateToForgotPassword()" class="changePasswordBtn">Change Password?</button> -->
+                <!-- <a routerLink="/forgot-password" class="forgotPassword"> Change Password?</a> -->
+                <!-- <i class="fa fa-pencil"></i>  -->
+ 
               <!-- password-change.component.html -->
               <div *ngIf="isEditingPassword" class="password-change-popup">
                 <div class="passwordChangeContent">
