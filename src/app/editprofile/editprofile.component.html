@@ -56,21 +56,30 @@
               -->
 
               <div class="mb-3">
-                <button id="password-change-button" type="button" (click)="openPasswordChangePopup()">Change Password</button>
+                <button
+                  id="password-change-button"
+                  type="button"
+                  (click)="openPasswordChangePopup()"
+                >
+                  Change Password
+                </button>
               </div>
             
+            
               
-                <!-- <button type="button" (click)="navigateToForgotPassword()" class="changePasswordBtn">Change Password?</button> -->
-                <!-- <a routerLink="/forgot-password" class="forgotPassword"> Change Password?</a> -->
-                <!-- <i class="fa fa-pencil"></i>  -->
- 
+
+              
+              <!-- <button type="button" (click)="navigateToForgotPassword()" class="changePasswordBtn">Change Password?</button> -->
+              <!-- <a routerLink="/forgot-password" class="forgotPassword"> Change Password?</a> -->
+              <!-- <i class="fa fa-pencil"></i>  -->
+
               <!-- password-change.component.html -->
               <div *ngIf="isEditingPassword" class="password-change-popup">
                 <div class="passwordChangeContent">
                   <h3>Change Password</h3>
                   <div class="mb-3">
                     <label for="oldPassword" class="form-label"
-                      >Old Password</label
+                      >Current Password</label
                     >
                     <input
                       type="password"
@@ -99,22 +108,16 @@
                       [(ngModel)]="newPassword"
                       name="newPassword"
                     />
-                    <div
-                      *ngIf="
-                        passwordForm.get('newPassword')?.invalid &&
-                        passwordForm.get('newPassword')?.touched
-                      "
-                      class="error-message"
-                    >
-                      Password must be 8 characters minimum and include at least
-                      one letter and one number.
-                    </div>
+                    <div *ngIf="passwordForm.get('newPassword')?.invalid && passwordForm.get('newPassword')?.touched" class="error-message">
+                      Password must be 8 characters minimum and include at least one letter and one number.
+                  </div>
                   </div>
                   <button
                     type="button"
                     (click)="changePassword()"
                     class="paymentBtns"
-                    matTooltip="Finalize it!">
+                    matTooltip="Finalize it!"
+                  >
                     Change Password
                   </button>
                   <button
@@ -226,9 +229,14 @@
             </form>
             <div *ngIf="isSaveSuccessful" class="confirmation-modal">
               <div class="confirmation-content">
-                <span class="close-icon" (click)="closeConfirmationModal()"
-                  >&times;</span
+                <p
+                  class="close-icon"
+                  (click)="closeConfirmationModal()"
+                  style="text-align: right; margin-bottom: 0; cursor: pointer"
                 >
+                  ×
+                </p>
+
                 <h1 class="modalText">Profile updated successfully!</h1>
               </div>
             </div>
@@ -237,11 +245,11 @@
         </div>
       </div>
 
-      <div *ngIf="selectedTab === 'paymentCards'">
+      <div class="paymentCardsWrapper" *ngIf="selectedTab === 'paymentCards'">
         <!-- Payment Cards Content Here -->
         <!-- ... -->
 
-        <h3 id="paymentHeading">Payment Cards</h3>
+        <h3>Payment Cards</h3>
         <div class="paymentMain">
           <!-- Display message when there are no cards available -->
           <div
@@ -255,10 +263,11 @@
             *ngFor="let card of paymentData; let i = index"
           >
             <div class="col-md-12 pad-0">
-              <p>
-                {{ card.cardType }} ending in {{ card.cardNumber.slice(-4) }}
-              </p>
-              <div class="flexBtns">
+              
+              <div class="flexBtns" style="border-bottom: 1px solid #000; align-items: center; margin-bottom: 10px;">
+                <p>
+                  {{ card.cardType }} ending in {{ card.cardNumber.slice(-4) }}
+                </p>
                 <button
                   type="button"
                   class="paymentBtns"
@@ -420,16 +429,15 @@
               </div>
             </div>
           </div>
-
           <button
             type="button"
-            class="paymentBtns marL0"
+            class="paymentBtns marL0 marTen"
             (click)="toggleAddCardDetails()"
             [disabled]="hasReachedCardLimit()"
           >
             <i class="fa fa-plus"> </i> Add New Payment Card
           </button>
-          <div class="cardDetails" *ngIf="showAddCardDetails">
+          <div class="cardDetails addCardPopup" *ngIf="showAddCardDetails">
             <div class="cardDetailsContent">
               <h2>Add Payment Information</h2>
               <form
@@ -458,7 +466,7 @@
                         "
                         class="error-message"
                       >
-                        Card Number is required.
+                        Card number should be a 16 digit number.
                       </div>
                     </div>
                     <div class="mb-3">

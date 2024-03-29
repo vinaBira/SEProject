@@ -240,6 +240,10 @@ app-footer {
   transition: background-color 0.3s;
 }
 
+.marTen{
+margin-top: 10px !important;
+
+}
 .paymentBtns:hover,
 .paymentBtns:focus {
   background-color: #2980b9;
@@ -248,9 +252,43 @@ app-footer {
 .paymentBtns:disabled {
   background-color: #ccc;
 }
+.paymentCardsWrapper
+{
+  position: relative;
+    height: 772px;
+}
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+.addCardPopup
+{
+  z-index: 9999;
+  position: fixed;
+  left: 20%;
+  top: 15%;
+  height: auto;
+  width: 71%;
+  background: #fff;
+}
 
 .cardDetails {
-  display: none;
+  display: block;
   margin-top: 20px;
 }
 

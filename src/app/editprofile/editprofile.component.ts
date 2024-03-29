@@ -31,6 +31,8 @@ export class EditprofileComponent implements OnInit {
   successMessage: any;
   errorMessage: any;
   addCardError : any;
+  passwordsMatchError: string = '';
+
   selectedTab = 'personalInfo';
 
   constructor(private http: HttpClient, private router: Router, private fb: FormBuilder) { 
@@ -118,7 +120,7 @@ export class EditprofileComponent implements OnInit {
     this.showCardDetails[toggleID] = !this.showCardDetails[toggleID];
   }
   toggleAddCardDetails() {
-    console.log("Inside Toogle")
+    console.log("Inside Toogle ",this.showAddCardDetails)
     this.showAddCardDetails = !this.showAddCardDetails;
     console.log("After toogling", this.showAddCardDetails);
     this.addCardError = '';
@@ -158,6 +160,12 @@ export class EditprofileComponent implements OnInit {
     this.successMessage = '';
   }
   changePassword() {
+    if (this.oldPassword === this.newPassword) {
+      // Set the passwordsMatchError if the passwords are the same
+      this.errorMessage = 'New password cannot be the same as the current password.';
+      this.successMessage = '';
+      return; // Stop the method here
+    }
     if (this.oldPassword === this.customerData.password) {
       // Update the password
       this.customerData.password = this.newPassword;

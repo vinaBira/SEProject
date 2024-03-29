@@ -38,12 +38,14 @@
 
 .login-container .form-group {
   text-align: center;
+
 }
 
 .labelTag {
   font-weight: 600;
   color: #010e1e;
 }
+
 
 .login-container input[type="text"],
 .login-container input[type="password"] {
@@ -53,8 +55,8 @@
   border: unset;
   border-bottom: 1px solid #ccc;
   border-radius: 3px;
+  color: black;
 }
-
 .login-container input:focus-visible {
   border: unset;
   outline: unset;
