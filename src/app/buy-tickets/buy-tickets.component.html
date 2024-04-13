@@ -77,8 +77,8 @@
 <div class="select-user">
   <label for="is-adult"> Do you want to add child tickets?</label>
   <select class="form-control" id="is-adult" [(ngModel)]="isAdult" (change)="onUserSelectionChange($event)">
-      <option value="true">Yes</option>
-      <option value="false">No</option>
+    <option value="false">Yes</option>
+    <option value="true">No</option>
   </select>
 </div>
 
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="flxItems" *ngIf="!isAdult">
-                <span>Child: ($11.00) </span>
+                <span>Child: ($9.00) </span>
                 <div class="counter">
                     <button class="counterBtn" (click)="decrement('child')">-</button>
                     <input type="number" [(ngModel)]="childCount" min="0" class="counterInpt">

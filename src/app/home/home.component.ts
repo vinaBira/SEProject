@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
 
   @Input() searchValueChanged: any;
   @Output() searchTextHome: EventEmitter<string> = new EventEmitter<string>();
