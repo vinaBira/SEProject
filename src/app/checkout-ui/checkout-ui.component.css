@@ -42,7 +42,11 @@
   color: #011631;
 }
 
-/* Payment and Promotion Column */
+.MovieDetailsDiv p {
+  text-align: left;
+}
+
+/* Payment Method */
 .paymentDetailsDiv {
   padding: 10px;
   border: 1px solid grey;
@@ -50,6 +54,20 @@
   background: white;
   margin-top: 10px;
   color: grey;
+}
+
+/* Promo Code Method */
+.promoDetailsDiv {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: white;
+  margin-top: 10px;
+  color: grey;
+}
+
+.card-details .form-control{
+  margin-bottom: 10px;
 }
 
 .orderDetailsDiv {
@@ -129,4 +147,22 @@ h2 {
 
 .addBtn {
   margin-left: 20px;
+}
+
+/* Order total spacing */
+#orderTotal {
+  margin-top: 10px;
+  display:table;
+  align-items: left;
+}
+#orderTotal div {
+  display:table-cell;
+}
+#orderTotal h2 {
+  margin-right: 15px;
+}
+.line {
+  border-bottom: 1px solid #1e1111;
+  width: 100%;
+  margin-top: 10px; /* Adjust spacing as needed */
 }

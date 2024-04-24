@@ -18,7 +18,7 @@
           <div class="paymentDetailsDiv">
             <div class="flexBtns">
               <h1>Payment Methods</h1>
-              <!-- Text boxes for card details -->
+              <!-- Text box card info -->
               <div class="card-details">
                 <input type="text" placeholder="Card Number" class="form-control">
                 <input type="text" placeholder="Card Name" class="form-control">
@@ -31,11 +31,10 @@
             </div>
           </div>
           <!-- Promo Code -->
-          <div class="paymentDetailsDiv">
+          <div class="promoDetailsDiv">
             <div class="flexBtns">
               <h1>Promo Code</h1>
               <div class="mb-3 promo-code-section">
-                <label for="promoCode" class="form-label">Enter Promo Code</label>
                 <div class="inpBtnFlx">
                   <input type="text" class="form-control width100per" id="promoCode" formControlName="promoCode">
                   <button class="addBtn" (click)="checkIfPromoCodeValid()">Apply</button>
@@ -72,10 +71,15 @@
               <div class="orderItem">
                 <p>Sales Tax (7%) - $0.98</p>
               </div>
-              <div class="orderTotal">
-                <h2>Total</h2>
+              <div class="line"></div>
+              <header id= "orderTotal">
+                <div>
+                <h2>Total: </h2>
+                </div>
+                <div>
                 <h2>$20.98</h2>
-              </div>
+                </div>
+              </header>              
             </div>
           </div>
         </div>
