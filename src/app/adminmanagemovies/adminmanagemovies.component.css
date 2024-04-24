@@ -83,7 +83,7 @@ z-index: 1001;
 
 .popupContent {
 
-background:  #f3e4f7;
+background:  #e4e8f7; /*Manage movies popup background color*/
 color: black;
 padding: 20px;
 border-radius: 5px;
@@ -153,8 +153,8 @@ font-size: 16px;
 }
 /* Style for disabled buttons with a specific class */
 .login-container button:disabled {
-background-color: #813ba1; /* Change the background color */
-color: #000; /* Change the text color */
+background-color: #293a50; 
+color: #000; 
 cursor: not-allowed; /* not clickable cursor */
 }
 /* Style for error content */
@@ -201,7 +201,7 @@ top: 10px;
 right: 10px;
 cursor: pointer;
 font-size: 20px;
-color: #c37adf;
+color: #a0b3e2;
 }
 
 /* Additional styles for error message text */
