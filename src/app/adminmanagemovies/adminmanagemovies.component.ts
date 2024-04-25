@@ -28,9 +28,11 @@ export class AdminmanagemoviesComponent implements OnInit {
   editingMovieData: FormGroup;
   errorSchedulingMovie : boolean = false;
   errorMessageScheduled : any;
+  today: string;
 
   @Input() movies: any[] = [];
   constructor(private fb: FormBuilder, private appService: appApiServices,private router: Router) {
+    this.today = new Date().toISOString().split('T')[0];
     this.scheduleMovieForm = this.fb.group({
       duration_minutes: [null, Validators.required],
       showDate: [''],

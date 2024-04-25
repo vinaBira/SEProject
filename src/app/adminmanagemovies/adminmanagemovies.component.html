@@ -262,13 +262,14 @@
             <div class="mb-3">
               <label for="showDate" class="labelTag">Show Date</label>
               <input class="form-control"
-              type="date"
-              id="showDate"
-              name="showDate"
-              formControlName="showDate"
-              placeholder="Enter Movie Show Date"
-              required
-              (change)="onShowDateChange($event)">
+                type="date"
+                id="showDate"
+                name="showDate"
+                formControlName="showDate"
+                placeholder="Enter Movie Show Date"
+                required
+                (change)="onShowDateChange($event)"
+                [min]="today">
             </div>
             <div class="mb-3">
               <label for="showTime" class="labelTag">Show Time</label>
