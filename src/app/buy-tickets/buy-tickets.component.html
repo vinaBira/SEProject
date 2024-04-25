@@ -60,10 +60,18 @@
     <div class="popup-content">
       <h2>Select Options</h2>
        <!-- Select Movie Date -->
+       <!---
         <div class="select-time">
             <label for="movie-date" class="marR5">Select Show Date:</label>
             <input class="dateInpField" type="date" [(ngModel)]="selectedDate" id="movie-date" required (change)="onShowDateChange($event)">
         </div>
+      -->
+        <div class="select-time">
+          <label for="movie-date" class="marR5">Select Show Date:</label>
+          <input class="dateInpField" type="date" [(ngModel)]="selectedDate" id="movie-date" required
+                 min="{{ today | date:'yyyy-MM-dd' }}" 
+                 (change)="onShowDateChange($event)">
+      </div>
         <!-- Select Movie Time -->
         <div class="select-time customSelectTime">
             <label for="movie-time">Select Show Time:</label>

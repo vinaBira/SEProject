@@ -16,6 +16,7 @@ export class BuyTicketsComponent {
   showError: boolean = false;
   movieTitle: string = '';
   isAdult: boolean = true;
+  today: string = '';
 
   onUserSelectionChange(event: any) {
     this.isAdult = event.target.value === 'true';
@@ -114,6 +115,7 @@ export class BuyTicketsComponent {
    }
 
   ngOnInit(): void {
+    this.today = new Date().toISOString().split('T')[0]; //today's date
     this.showSeatPopup = true;
     const userI_D = localStorage.getItem('userID');
     if(userI_D !== null)
@@ -214,6 +216,25 @@ export class BuyTicketsComponent {
     this.showSeatPopup = true;
 }
   
+
+/*openSeatPopup() {
+    // Get today's date
+    const today = new Date();
+    
+    // Get the selected date from the date input
+    const selectedDate = new Date(this.selectedDate);
+
+    // Compare the selected date with today's date
+    if (selectedDate < today) {
+        // If the selected date is in the past, show an error message or handle it accordingly
+        // For example:
+        this.showAddSeatsErrorDiv = true;
+        this.addSeatsError = "Please select a future date for booking tickets.";
+    } else {
+        // If the selected date is in the future, proceed with opening the seat popup
+        this.showSeatPopup = true;
+    }
+} */
 
   getSelectsSelected() {
     // Implement if needed
