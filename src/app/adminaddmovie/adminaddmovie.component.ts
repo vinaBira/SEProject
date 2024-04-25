@@ -12,6 +12,7 @@ export class AdminaddmovieComponent implements OnInit {
   logoImg = '../assets/img/Logo-SE.jpeg';
   movieForm: FormGroup;
   submitted = false;
+  minShowTime: string;
 
   constructor(private router: Router, private fb: FormBuilder, private appService: appApiServices) {
     this.movieForm = this.fb.group({
@@ -31,7 +32,26 @@ export class AdminaddmovieComponent implements OnInit {
       movieCertificationCode: [''],
       language: ['', Validators.required]
     });
+
+    const today = new Date();
+    this.minShowTime = this.formatDate(today);
+
+    
   }
+
+  private formatDate(date: Date): string {
+    // Format the date to 'yyyy-MM-dd' for HTML date input
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    const formattedMonth = month < 10 ? `0${month}` : `${month}`;
+    const formattedDay = day < 10 ? `0${day}` : `${day}`;
+
+    return `${year}-${formattedMonth}-${formattedDay}`;
+  }
+
+  
 
   ngOnInit(): void {
   }
