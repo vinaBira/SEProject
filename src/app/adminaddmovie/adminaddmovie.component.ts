@@ -60,22 +60,21 @@ export class AdminaddmovieComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
+  
     if (this.movieForm.invalid) {
-      //return;
+      return;
     }
-
+  
     const finalFormData = this.movieForm.value;
-    console.log("Isplaying response", this.movieForm.value);
-    console.log("Entered details are",finalFormData);
-    
     this.appService.addMovieAdmin(finalFormData).subscribe(
       (response: any) => {
         console.log("Added movie to DB", response);
+        alert('Movie added successfully!');
         this.router.navigate(['/admin/home']);
       },
       (error) => {
         console.error('Error:', error);
       });
   }
+  
 }
