@@ -3,13 +3,13 @@
     width: 780px;
     padding: 20px; 
     border-radius: 5px; 
-    color: #fff; 
+    color: #011631; /* Updated color for text */
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
     overflow-y: auto; 
     max-height: 700px;
-  }
+}
 
 .welcomeMessage h2 {
     text-align: center;
@@ -20,18 +20,28 @@
 
 .addMovieForm {
     margin-top: 30px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
-.addMovieForm label {
-    font-weight: bold;
-    color: #011631;
+
+.addButton {
+    background-color: #011631; /* Dark color for button */
+    color: #FFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 18px;
+    display: block;
+    margin: 20px auto 0; /* Updated margin to add space below the button */
+}
+
+.addButton:hover {
+    background-color: #999999; /* Grey color for hover */
 }
 
 .form-group {
     margin-bottom: 20px;
-    font-size: 18px;
 }
 
 .form-control {
@@ -39,58 +49,14 @@
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-sizing: border-box;
 }
 
-.addButton {
-    background-color: #a0b3e2;
-    color: #FFF;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
-    margin: 0 auto;
-    display: block;
-    margin: 0 auto;
+.addMovieForm label {
+    font-weight: bold;
+    color: #011631;
 }
 
-.addButton:hover {
-    background-color: #011631;
-}
-
-.addMovieForm select,
-.addMovieForm input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-.addMovieForm textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-.mandatory {
+.mandatory, .error-message {
     color: red;
-  }
-  
-  .error-message {
-    color: red; 
-    font-size: 14px; 
-    margin-top: 5px; 
-    font-weight: 800;
-  }
-  
-  .form-group .error-message {
-    font-size: 12px; 
-  }
-  
+}
+

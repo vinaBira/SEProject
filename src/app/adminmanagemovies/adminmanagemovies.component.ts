@@ -95,18 +95,24 @@ export class AdminmanagemoviesComponent implements OnInit {
       })
   }
 
-  deleteMovie(id: any)
-  {
-    const data= { id : id}
-    this.appService.deleteMovieAdmin(data).subscribe(
-      (response: any) => {
-        console.log("Movie successfully deleted", response);
-        this.getMovies();
-        this.router.navigate(['/admin/home']);
-      },
-      (error) => {
-        console.error('Error:', error);
-      })
+  deleteMovie(id: any) {
+    if (confirm("Are you sure you want to delete this movie?")) {
+      // User clicked OK
+      this.appService.deleteMovieAdmin({ id }).subscribe(
+        (response: any) => {
+          console.log("Movie successfully deleted", response);
+          this.getMovies(); // Refresh the list or handle UI update
+          alert("Movie was successfully deleted."); // Optional: Alert user of success
+        },
+        (error) => {
+          console.error('Error:', error);
+          alert("Failed to delete the movie."); // Optional: Alert user of failure
+        }
+      );
+    } else {
+      // User clicked Cancel
+      console.log("Movie deletion canceled.");
+    }
   }
   scheduleMovie(movieID : any)
   {
