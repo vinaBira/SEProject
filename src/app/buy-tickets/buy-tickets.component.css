@@ -125,15 +125,15 @@ select {
     align-items: center;
     cursor: pointer;
     border-radius: 8px;
-    border: 1px solid #a0b3e2;
+    border: 1px solid #213978;
 }
 
 .seat:hover {
-    background-color: #011631; 
+    background-color: #4c7ab5; 
 }
 
 .seat.selected {
-    background-color: #a0b3e2;
+    background-color: #213978;
     color: white;
 }
 
@@ -206,7 +206,7 @@ button:hover {
 /* Style the input when it's focused */
 .counterInpt:focus {
     outline: none;
-    border-color: #a0b3e2;
+    border-color: #213978;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 .numberOfSeats
@@ -236,7 +236,7 @@ button:hover {
 .seatsInfoBtn
 {
     color: #FFF;
-    background-color: #a0b3e2;
+    background-color: #213978;
     padding: 10px 15px;
     text-align: center;
     border: unset;
@@ -250,7 +250,7 @@ button:hover {
 .movieDetailsSection
 {
     padding-bottom: 10px;
-    border-bottom: 1px solid #a0b3e2;
+    border-bottom: 1px solid #213978;
 }
 .popup-overlay {
     position: fixed;
@@ -351,7 +351,7 @@ button:hover {
   
   .popup-content h2 {
     margin-bottom: 15px;
-    border-bottom: 1px solid #a0b3e2;
+    border-bottom: 1px solid #213978;
     text-align: center;
   }
   
