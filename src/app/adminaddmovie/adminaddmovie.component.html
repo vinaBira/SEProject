@@ -11,7 +11,7 @@
       <form (ngSubmit)="onSubmit()" class="addMovieForm" [formGroup]="movieForm" novalidate>
         <!-- Movie Title -->
         <div class="form-group" [class.has-error]="submitted && f.movieTitle.errors">
-          <label for="movieTitle" class="labelTag">Movie Title<span class="mandatory">*</span></label>
+          <label for="movieTitle" class="labelTag">Movie Title<span class="mandatory">*</span> </label>
           <input class="form-control"
             type="text"
             id="movieTitle"
@@ -37,7 +37,7 @@
   
         <!-- Movie Director -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="movieDirector" class="labelTag">Movie Director</label>
+          <label for="movieDirector" class="labelTag">Movie Director<span class="mandatory">*</span></label>
           <input class="form-control"
             type="text"
             id="movieDirector"
@@ -49,7 +49,7 @@
   
         <!-- Movie Producer -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="movieProducer" class="labelTag">Movie Producer</label>
+          <label for="movieProducer" class="labelTag">Movie Producer<span class="mandatory">*</span></label>
           <input class="form-control"
             type="text"
             id="movieProducer"
@@ -61,7 +61,7 @@
   
         <!-- Movie Cast -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="movieCast" class="labelTag">Movie Cast</label>
+          <label for="movieCast" class="labelTag">Movie Cast<span class="mandatory">*</span></label>
           <input class="form-control"
             type="text"
             id="movieCast"
@@ -74,7 +74,7 @@
   
         <!-- Show Time -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="showTime" class="labelTag">Show Time</label>
+          <label for="showTime" class="labelTag">Show Time<span class="mandatory">*</span></label>
           <input class="form-control"
             type="date"
             id="showTime"
@@ -110,7 +110,7 @@
   
         <!-- Reviews -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="reviews" class="labelTag">Reviews</label>
+          <label for="reviews" class="labelTag">Reviews<span class="mandatory">*</span></label>
           <textarea class="form-control" 
             id="reviews"
             name="reviews"
@@ -138,7 +138,7 @@
   
         <!-- Trailer Link -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="trailerLink" class="labelTag">Trailer Link</label>
+          <label for="trailerLink" class="labelTag">Trailer Link<span class="mandatory">*</span></label>
           <input class="form-control"
             type="text"
             id="trailerLink"
@@ -151,7 +151,7 @@
   
         <!-- Film Rating Code -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="filmRatingCode" class="labelTag">Film Rating Code</label>
+          <label for="filmRatingCode" class="labelTag">Film Rating Code<span class="mandatory">*</span></label>
           <input class="form-control"
             type="text"
             id="filmRatingCode"
@@ -163,7 +163,7 @@
   
         <!-- Rating -->
         <div class="form-group" [formGroup]="movieForm">
-          <label for="rating" class="labelTag">Rating</label>
+          <label for="rating" class="labelTag">Rating<span class="mandatory">*</span></label>
           <input class="form-control"
             type="number"
             id="rating"
@@ -211,11 +211,11 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="addButton">Add Movie</button>
-        <!-- <div style="display: flex; justify-content: space-between; text-align: center;"> -->
-          <!-- <button class="addButton" onclick="goHome()" matTooltip="Go to home page!">Return Home</button> -->
-          
-        <!-- </div> -->
+        
+        <div style="display: flex; justify-content: space-between; text-align: center;">
+          <button class="addButton" onclick="goHome()" matTooltip="Go to home page!">Return Home</button> 
+          <button type="submit" class="addButton">Add Movie</button>
+       </div>
       </form>
     </div>
   </div>
