@@ -2,11 +2,9 @@
   <div class="swiper-wrapper movieSwipperWrapper">
     <div class="swiper-slide" *ngFor="let movie of movieList">
       <!-- Image that the user clicks -->
-      <img class="movieBannerImg" src="{{movie.bannerSrc}}" (click)="openIframeDialog(movie)">
-      
-      <!-- Iframe with the trailer source directly from movie.trailer_src
-      <iframe *ngIf="movie.showIframe" width="560" height="315" [src]="getIframeUrl(movie)" frameborder="0" allowfullscreen></iframe> -->
-
+      <div class="imgContainer" (click)="openIframeDialog(movie)">
+        <img class="movieBannerImg" [src]="movie.bannerSrc">
+      </div>
     </div>
   </div>
 
@@ -17,3 +15,20 @@
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
+<style>
+  .imgContainer {
+    width: 100%;
+    height: auto;
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movieBannerImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>

@@ -62,7 +62,7 @@ export class AdminaddmovieComponent implements OnInit {
     this.submitted = true;
   
     if (this.movieForm.invalid) {
-      return;
+      // return;
     }
   
     const finalFormData = this.movieForm.value;

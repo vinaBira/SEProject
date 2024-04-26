@@ -251,7 +251,7 @@
         <div class="addMovie-container">
           <form [formGroup]="scheduleMovieForm" (ngSubmit)="addShowSchedule()" class="addMovieForm">
             <div class="mb-3">
-              <label for="duration_minutes" class="labelTag">Movie Duration</label>
+              <label for="duration_minutes" class="labelTag">Movie Duration<span class="mandatory">*</span></label>
               <input class="form-control"
                 type="number"
                 id="duration_minutes"
@@ -261,7 +261,7 @@
                 required>
             </div>
             <div class="mb-3">
-              <label for="showDate" class="labelTag">Show Date</label>
+              <label for="showDate" class="labelTag">Show Date<span class="mandatory">*</span></label>
               <input class="form-control"
                 type="date"
                 id="showDate"
@@ -273,7 +273,7 @@
                 [min]="today">
             </div>
             <div class="mb-3">
-              <label for="showTime" class="labelTag">Show Time</label>
+              <label for="showTime" class="labelTag">Show Time<span class="mandatory">*</span></label>
               <select class="form-control" id="showTime" name="showTime" formControlName="showTime" required>
                 <ng-container *ngFor="let availableShow of movieShowsAvailable">
                   <option [value]="availableShow">{{ getFormattedShowTime(availableShow) }}</option>

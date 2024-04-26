@@ -55,4 +55,8 @@ h2 {
   box-sizing: border-box;
 }
 
+.mandatory, .error-message {
+  color: red;
+}
+
 

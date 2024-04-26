@@ -7,7 +7,7 @@
         <form (ngSubmit)="addNewPromotion()" [formGroup]="addPromoForm" class="addUserForm">
             <!-- Promotion Code -->
             <div class="form-group">
-                <label for="promoCode" class="labelTag">Promotion Code</label>
+                <label for="promoCode" class="labelTag">Promotion Code<span class="mandatory">*</span></label>
                 <input class="form-element"
                     type="text"
                     id="promoCode"
@@ -17,7 +17,7 @@
             </div>
             <!-- Promotion description -->
             <div class="form-group">
-                <label for="promoDescription" class="labelTag">Promotion Description</label>
+                <label for="promoDescription" class="labelTag">Promotion Description<span class="mandatory">*</span></label>
                 <input class="form-element"
                     type="text"
                     id="promoDescription"
@@ -28,7 +28,7 @@
   
             <!-- Availability Start Date -->
             <div class="form-group">
-                <label for="startDate" class="labelTag">Starts From</label>
+                <label for="startDate" class="labelTag">Starts From<span class="mandatory">*</span></label>
                 <input class="form-element"
                     type="date"
                     id="startDate"
@@ -38,7 +38,7 @@
             </div>
             <!-- Availability End Date -->
             <div class="form-group">
-                <label for="endDate" class="labelTag">Ends on</label>
+                <label for="endDate" class="labelTag">Ends on<span class="mandatory">*</span></label>
                 <input class="form-element"
                     type="date"
                     id="endDate"
@@ -48,7 +48,7 @@
             </div>
             <!-- Discount Applied -->
             <div class="form-group" >
-                <label for="discountApplied" class="labelTag">Discount Applied</label>
+                <label for="discountApplied" class="labelTag">Discount Applied<span class="mandatory">*</span></label>
                 <input class="form-element"
                     type="number"
                     id="discountApplied"
