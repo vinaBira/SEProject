@@ -15,7 +15,7 @@ export class AdminaddpromotionComponent implements OnInit {
   promoAlreadyExistsPop : boolean= false;
   loading : boolean= false;
   promoErrorMessage : any;
-
+  minShowTime: string;
 
   constructor(private router: Router, private fb: FormBuilder, private http: HttpClient, private appService: appApiServices) {
     this.addPromoForm = this.fb.group({
@@ -25,7 +25,20 @@ export class AdminaddpromotionComponent implements OnInit {
       endDate : [''],
       discountApplied : ['']
     })
+    const today = new Date();
+    this.minShowTime = this.formatDate(today);
    }
+   private formatDate(date: Date): string {
+    // Format the date to 'yyyy-MM-dd' for HTML date input
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    const formattedMonth = month < 10 ? `0${month}` : `${month}`;
+    const formattedDay = day < 10 ? `0${day}` : `${day}`;
+
+    return `${year}-${formattedMonth}-${formattedDay}`;
+  }
 
   ngOnInit(): void {
   }
@@ -56,6 +69,9 @@ export class AdminaddpromotionComponent implements OnInit {
   }
   closeErrorModal() {
     this.promoAlreadyExistsPop = false;
+    this.router.navigate(['/admin/home']);
+  }
+  goHome() {
     this.router.navigate(['/admin/home']);
   }
 }

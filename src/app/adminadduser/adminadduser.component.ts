@@ -33,5 +33,8 @@ export class AdminadduserComponent implements OnInit {
         console.error('Error:', error);
       })
     }
+    goHome() {
+      this.router.navigate(['/admin/home']);
+    }
   
 }

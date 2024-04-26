@@ -35,7 +35,6 @@ export class AdminaddmovieComponent implements OnInit {
 
     const today = new Date();
     this.minShowTime = this.formatDate(today);
-
     
   }
 

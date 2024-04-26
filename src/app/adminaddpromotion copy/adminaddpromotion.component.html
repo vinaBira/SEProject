@@ -34,7 +34,7 @@
                     id="startDate"
                     formControlName="startDate"
                     placeholder="Promotion Start Date"
-                    required>
+                    [min]="minShowTime">
             </div>
             <!-- Availability End Date -->
             <div class="form-group">
@@ -44,7 +44,7 @@
                     id="endDate"
                     formControlName="endDate"
                     placeholder="Promotion End Date"
-                    required>
+                    [min]="minShowTime">
             </div>
             <!-- Discount Applied -->
             <div class="form-group" >
@@ -56,9 +56,12 @@
                     placeholder="Discount"
                     required>
             </div>
-
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <button class="addButton" onclick="goHome()" matTooltip="Go to home page!">Return Home</button>
+                <button type="submit" class="addButton" matTooltip="Add promotion to list!">Add Promotion</button>
+              </div>
             <!-- Submit Button -->
-            <button type="submit" class="addButton" matTooltip="Add promotion to list!">Add Promotion</button>
+            
         </form>
     </div>
     <div class="loader" *ngIf="loading"></div>
