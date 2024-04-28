@@ -58,6 +58,7 @@
 
 .searchWrapper {
   display: flex;
+  width: 650px;
 }
 
 .searchBar {
